@@ -45,6 +45,7 @@ const config = {
     require('postcss-import'),
     // require('postcss-use')({ modules: ['autoprefixer']}),
     require('postcss-sassy-mixins'),
+    require('postcss-for'),
     require('postcss-conditionals'),
     require('postcss-simple-vars'),
     require('postcss-mathjs'),

@@ -19,17 +19,17 @@ $loading-size: 5rem;
 }
 
 /*@function delay($interval, $count, $index) {
-  @return ($index * $interval) - ($interval * $count);
+  @return ;
 }
 */
 
-/*@mixin ball-scale-ripple-multiple ($n:3, $start:0) {
-  @for $i from $start through $n {
-    .item:nth-child(#{$i}) {
-      animation-delay: delay(1s, $n, $i - 1);
+@mixin ball-scale-ripple-multiple($n:3, $start:0) {
+  @for $i from $start to $n {
+    .item:nth-child($i) {
+      animation-delay: resolve(resolve($i - 1 * 1) - resolve(1 * $n))s;
     }
   }
-}*/
+}
 
 .loading {
   display: flex;
@@ -48,12 +48,12 @@ $loading-size: 5rem;
   height: $loading-size;
   position: relative;
 
-  /*@include ball-scale-ripple-multiple();*/
+  @include ball-scale-ripple-multiple();
 }
 
 .item {
   position: absolute;
-  left: -$loading-size/2;
+  left: 2.5rem;
   width: $loading-size;
   height: $loading-size;
   border-radius: 100%;
