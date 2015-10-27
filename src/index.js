@@ -6,6 +6,8 @@ import Alert from './components/alert';
 import Panel from './components/panel';
 import Button from './components/buttons';
 import Loading from './components/loading';
+import Label from './components/label';
+import Badges from './components/badges';
 
 const defaultProps = {
   styles: Default,
@@ -23,6 +25,10 @@ export default function(props = defaultProps) {
     Button: Button(styles.button),
     ...components,
     Loading: Loading(styles.loading),
+    ...components,
+    Label: Label(styles.label),
+    ...components,
+    Badges: Badges(styles.badges),
     ...components,
   };
 }

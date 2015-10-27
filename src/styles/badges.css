@@ -1,0 +1,56 @@
+@import './variables';
+
+@mixin badges-mixin($background-color, $color, $border-color) {
+  background-color: $background-color;
+  color: $color;
+  border-color: $border-color;
+};
+
+$badge-padding: .2rem .6rem .3rem;
+$badge-margin: 0;
+$badge-font-size: 1.1rem;
+$badge-line-height: 1;
+$badge-min-width: 1rem;
+$badge-border-radius: 50%;
+
+.badge {
+  display: inline-block;
+  min-width: $badge-min-width;
+  padding: $badge-padding;
+  margin: $badge-margin;
+  font-size: $badge-font-size;
+  color: #000;
+  line-height: $badge-line-height;
+  border-radius: $badge-border-radius;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.default {
+  @include badges-mixin($brand-default, $brand-white, transparent);
+}
+
+.primary {
+  @include badges-mixin($brand-primary, $brand-white, transparent);
+}
+
+.accent {
+  @include badges-mixin($brand-accent, $brand-white, transparent);
+}
+
+/*.success {
+  @include badges-mixin($brand-success, $brand-white, transparent);
+}
+
+.info {
+  @include badges-mixin($brand-info, $brand-white, transparent);
+}
+
+.warning {
+  @include badges-mixin($brand-warning, $brand-white, transparent);
+}
+
+.danger {
+  @include badges-mixin($brand-danger, $brand-white, transparent);
+}*/
