@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'grid';
+
+/* GRID */
+
+.left {
+  @include make-column('sm', 6);
+  composes: text-left from 'styles/type';
+}
+
+.right {
+  @include make-column('sm', 6);
+  composes: text-right from 'styles/type';
+}
+
+/* end */
+
+.range {
+  position: relative;
+  margin: 3rem 1.5rem 1rem;
+}
+
+.scale {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -0.25rem;
+  height: 0.4rem;
+  background-color: #D8D8D8;
+  border-radius: 0.2rem;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  right: 0;
+  z-index: 10;
+  margin-top: -0.2rem;
+  height: 0.4rem;
+  width: 20%;
+  background-color: $brand-primary;
+}
+
+.control {
+  position: absolute;
+  top: -.9rem;
+  left: 2rem;
+  z-index: 12;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: $brand-primary;
+  border-radius: 50%;
+  box-shadow: none;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: none;
+    box-shadow: none;
+    background-image: none;
+  }
+
+  &:last-child {
+    left: 9rem;
+  }
+}
+
+.value {
+  color: $brand-black;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.valueWrapper {
+  margin-top: 2rem;
+}

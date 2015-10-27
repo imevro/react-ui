@@ -1,0 +1,38 @@
+$input-sm-padding: 1rem 1.7rem;
+$input-lg-padding: 1.5rem;
+
+@import '../../variables';
+
+.form-control {
+  height: auto;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  text-align: left;
+  background-color: $brand-white;
+  border-radius: 0.2rem;
+  border: 1px solid $gray-lighter;
+  box-shadow: none;
+  transition: all .3s;
+
+  &-primary {
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: $brand-primary;
+      box-shadow: none;
+    }
+  }
+
+  &-sm {
+    padding: $input-sm-padding;
+  }
+
+  &-lg {
+    padding: $input-lg-padding;
+  }
+
+  &-block {
+    width: 100%;
+    display: block;
+  }
+}

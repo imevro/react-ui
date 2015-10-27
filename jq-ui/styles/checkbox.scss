@@ -1,0 +1,90 @@
+@import '../mixins/responsive';
+@import '../variables';
+
+.checkbox {
+  margin: 0.3rem 0;
+  line-height: 2rem;
+  background-color: $brand-white;
+  transition: background-color .3s;
+
+  &-label {
+    display: block;
+    padding: 1.5rem;
+
+    @include responsive(sm) {
+      display: inline-block;
+      padding: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-container {
+    margin-top: -1px;
+    border: 1px solid #e1e1e1;
+
+    &:nth-child(2) {
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0.2rem;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+    }
+
+    @include responsive(sm) {
+      margin: 0;
+      display: inline-block;
+      width: 50%;
+      border: none;
+    }
+  }
+
+  &-control {
+    appearance: none;
+    display: inline-block;
+    position: absolute;
+    right: 3rem;
+    outline: none;
+    background-color: $brand-white;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: none;
+    vertical-align: middle;
+    margin-right: .1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    outline: none!important; // fix bootstrap
+
+    @include responsive(sm) {
+      position: relative;
+      right: auto;
+      border: 1px solid #ccc;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      transition: background-color 0.3s;
+    }
+
+    &:checked {
+      border-color: $brand-primary;
+
+      &:before {
+        background-color: $brand-primary;
+        content: "";
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+
+        @include responsive(sm) {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

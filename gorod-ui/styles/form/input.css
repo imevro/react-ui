@@ -1,0 +1,54 @@
+@import 'variables';
+
+.formControl {
+  display: inline;
+  width: auto;
+  height: auto;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  text-align: left;
+  background-color: $brand-white;
+  box-shadow: none;
+  transition: all .3s;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    border-color: $brand-darker-grey;
+  }
+}
+
+.primary {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid $brand-accent;
+
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+  }
+}
+
+.accent {
+  &:hover {
+    color: $brand-white;
+    border-color: $brand-accent;
+    background-color: $brand-accent;
+  }
+  &:focus,
+  &:active {
+    color: $brand-white;
+    border-color: $brand-dark-red;
+    background-color: $brand-dark-red;
+  }
+}
+
+.lg {
+  padding: 0.95rem 1.6rem;
+}
+
+.block {
+  width: 100%;
+  display: block;
+}

@@ -1,0 +1,122 @@
+@import 'responsive-utils';
+
+/* Variables */
+/*$screen-xs: 48rem;
+$screen-sm: 76.8rem;
+$screen-md: 99.2rem;
+$screen-lg: 120rem;*/
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$container-xs: 100%;
+$container-sm: 100%;
+$container-md: 100%;
+$container-lg: 100%;
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+/* Mixins */
+@mixin make-container($type: fluid) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: resolve($grid-gutter-width/2);
+  padding-left: resolve($grid-gutter-width/2);
+
+  @if $type == static {
+    @media (min-width: $screen-sm) {
+      width: $container-sm;
+    }
+
+    @media (min-width: $screen-md) {
+      width: $container-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: $container-lg;
+    }
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin make-row() {
+  margin-left: resolve(-($grid-gutter-width/2));
+  margin-right: resolve(-($grid-gutter-width/2));
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin make-column($media, $columns) {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-right: resolve($grid-gutter-width/2);
+  padding-left: resolve($grid-gutter-width/2);
+  width: 100%;
+
+  /*@include responsive(sm) {
+    width: resolve($columns / $grid-columns * 100)%;
+  }*/
+
+  @if $media == xs {
+    width: resolve($columns / $grid-columns * 100)%;
+  } @else if $media == sm {
+    @media (min-width: $screen-sm) {
+      width: resolve($columns / $grid-columns * 100)%;
+    }
+  } @else if $media == md {
+    @media (min-width: $screen-md) {
+      width: resolve($columns / $grid-columns * 100)%;
+    }
+  } @else if $media == lg {
+    @media (min-width: $screen-lg) {
+      width: resolve($columns / $grid-columns * 100)%;
+    }
+  }
+}
+
+@mixin make-offset($media, $columns) {
+  @if $media == sm {
+    margin-left: resolve($columns / $grid-columns * 100)%;
+  } @else if $media == sm {
+    @media (min-width: $screen-sm) {
+      margin-left: resolve($columns / $grid-columns * 100)%;
+    }
+  } @else if $media == md {
+    @media (min-width: $screen-md) {
+      margin-left: resolve($columns / $grid-columns * 100)%;
+    }
+  } @else if $media == lg {
+    @media (min-width: $screen-lg) {
+      margin-left: resolve($columns / $grid-columns * 100)%;
+    }
+  }
+}
+
+/* Defaults */
+.containerFluid {
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}

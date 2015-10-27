@@ -1,0 +1,29 @@
+.filter {
+  &-item {
+    margin-bottom: .5rem;
+
+    &-value {
+      display: block;
+      padding: .5rem 0 .5rem 1.5rem;
+    }
+  }
+
+  &-btn {
+    &-reset {
+      background-color: transparent;
+      transition: all .3s;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      color: #aaa;
+
+      &:hover {
+        color: #111;
+        border-color: #111;
+      }
+    }
+
+    &-subscribe {
+      border-radius: 0;
+    }
+  }
+}

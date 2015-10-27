@@ -1,0 +1,53 @@
+.profile {
+
+  &-menu {
+    display: block;
+    width: 100%;
+    background: #FFFFFF;
+    margin-bottom: 2rem;
+
+    &-item {
+      background: #FFFFFF;
+      padding: 10px 17px;
+      color: $brand-accent;
+      cursor: pointer;
+      transition: all .1s;
+      border-radius: 2px;
+      display: block;
+
+      &:hover {
+        color: darken($brand-accent, 10%);
+        text-decoration: none;
+      }
+
+      &:focus {
+        text-decoration: none;
+      }
+
+      &.active {
+        background: $brand-accent;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &-form {
+    padding-left: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-control {
+      transition: all .3s;
+    }
+  
+    &-btn {
+      transition: all .3s;
+    }
+  }
+
+  &-label {
+    padding: 7px 15px;
+  }
+}

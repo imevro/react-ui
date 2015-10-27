@@ -1,0 +1,147 @@
+%extend_1 {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick {
+  &-slider {
+    position: relative;
+    display: block;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    //Instead of the line below you could use @include user-select($select)
+    user-select: none;
+    margin-bottom: 0;
+  }
+
+  &-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    min-height: 19rem;
+
+    @include responsive(sm) {
+      min-height: 48rem;
+    }
+
+    @include responsive(md) {
+      min-height: 60rem;
+    }
+  }
+
+  &-track {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-slide {
+    float: left;
+  }
+
+  &-active {
+
+  }
+
+  &-prev,
+  &-next,
+  &-prev:focus,
+  &-next:focus {
+    position: absolute;
+    top: 45%;
+    background-color: rgba(255, 255, 255, .3);
+    border: none;
+    border-radius: 3px;
+    transition: all .3s;
+    font-size: 0;
+    width: 17px;
+    height: 32px;
+    padding: 10px 15px;
+
+    &:before {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      height: 32px;
+      width: 30px;
+      background-repeat: no-repeat;
+      background-size: 10px 19px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .8);
+    }
+
+    &:focus {
+      @extend %extend_1;
+    }
+  }
+
+  &-prev {
+    left: 10px;
+
+    &:before {
+      content: "";
+      background-image: url(/assets/icons/slider/left.png);
+    }
+
+    &:hover {
+      @extend %extend_1;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      @extend %extend_1;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &.slick-disabled:before {
+      opacity: 0.25;
+    }
+  }
+
+  &-next {
+    right: 10px;
+
+    &:before {
+      content: "";
+      background-image: url(/assets/icons/slider/right.png);
+    }
+
+    &:hover {
+      @extend %extend_1;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &.slick-disabled:before {
+      opacity: 0.25;
+    }
+  }
+}
+
+.slick-loading {
+  .slick-track {
+    visibility: hidden;
+  }
+
+  .slick-slide {
+    visibility: hidden;
+  }
+}

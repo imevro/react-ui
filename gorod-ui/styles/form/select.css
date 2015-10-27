@@ -1,0 +1,47 @@
+@import 'variables';
+
+.formControl {
+  composes: formControl from './input';
+  border-color: $brand-dark-grey;
+  border-radius: .4rem;
+}
+
+.primary {
+  composes: primary from './input';
+}
+
+.accent {
+  composes: accent from './input';
+}
+
+.lg {
+  composes: lg from './input';
+}
+
+.block {
+  composes: block from './input';
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectPlaceholder {
+  display: none;
+}
+
+.ranged {
+  display: inline-block;
+
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:last-child {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

@@ -1,0 +1,24 @@
+.panel {
+  border-color: $body-bg;
+
+  &-footer {
+    background-color: #E3E3E3;
+  }
+}
+
+.panel-xs {
+  .panel-body {
+    padding: 1.93rem;
+  }
+}
+
+.panel-sm {
+  .panel-body {
+    padding: 2.5rem;
+  }
+
+  .panel-footer {
+    background-color: #E3E3E3;
+    padding: 1.5rem 2.5rem;
+  }
+}

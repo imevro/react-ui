@@ -1,0 +1,110 @@
+.f-modal {
+  background: rgba(0, 0, 0, .7);
+  color: $brand-black;
+
+  &-content {
+    width: 100%;
+    @include responsive(sm) {
+      width: 400px;
+      border-radius: .2rem;
+    }
+
+    &-text {
+      margin-bottom: 1.5em;
+      font-size: 1.6rem;
+
+      &-error {
+        color: $brand-danger;
+      }
+    }
+
+    &-brand {
+      width: 60%;
+    }
+
+    &-form-control {
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      font-size: 1.4rem;
+      background-color: $brand-white;
+      border: 1px solid #eee;
+      height: auto;
+      padding: 15px;
+      box-shadow: none;
+      transition: all .3s;
+
+      &:focus {
+        border-color: $brand-warning;
+      }
+    }
+
+    &-link {
+      cursor: pointer;
+      margin-top: 1.5rem;
+      display: inline-block;
+    }
+
+    &-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid #eee;
+
+      &-title {
+        text-align: left;
+        margin: 0;
+
+        @include responsive(sm) {
+          text-align: center;
+        }
+      }
+    }
+
+    &-body {
+      padding: 1.5rem;
+
+      @include responsive(sm) {
+        padding: 1.5rem 3rem 3rem 3rem;
+      }
+    }
+  }
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+    cursor: pointer;
+
+    @include responsive(sm) {
+      top: -5rem;
+      right: -5rem;
+    }
+
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      border: 2px solid #777;
+      border-radius: 50%;
+      padding: 4px;
+      fill: #777;
+
+      @include responsive(sm) {
+        fill: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.modal {
+
+  &-preview {
+    margin: 15px -30px -30px;
+    padding: 20px 30px;
+    background: #eee;
+
+    &-message {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}
