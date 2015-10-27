@@ -1,7 +1,5 @@
-import alert from './alert.css';
-import panel from './panel.css';
+import alert from './alert';
 
 export default {
   alert,
-  panel,
-}
+};

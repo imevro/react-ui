@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppContainer from 'containers/app';
-import ReactUI from 'react-ui';
-import GorodStyles from 'styles';
 
-const GorodUI = ReactUI(GorodStyles);
-// const GorodUI = ReactUI;
+import AppContainer from 'containers/app';
+
+import ReactUI from 'react-ui';
+import styles from 'styles';
+
+export const UI = ReactUI(styles);
 
 ReactDOM.render((
-  <AppContainer>
-    <GorodUI.Alert message="test">A L E R T</GorodUI.Alert>
-  </AppContainer>
+  <AppContainer />
 ), document.getElementById(`app`));

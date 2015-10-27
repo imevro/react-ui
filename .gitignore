@@ -1,4 +1,8 @@
-.DS_store
 node_modules
+.DS_Store
 npm-debug.log
+build
+.publish
+.tmp
+test-reports
 import/*

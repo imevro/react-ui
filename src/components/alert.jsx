@@ -1,9 +1,11 @@
-import React, { PropTypes } from 'react';
-import cn from 'classnames';
+import React from 'react';
+// import cn from 'classnames';
 
-export default function(props) {
-  return <div>{props.children}</div>
-}
+export default ({ alert }) => props => {
+  return (
+    <div className={alert.panel}>{props.children}</div>
+  );
+};
 
 // export default (props) => {
 //   return (

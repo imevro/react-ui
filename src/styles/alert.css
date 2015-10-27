@@ -1,5 +1,3 @@
-.alert {
-  &-panel {
-    background-color: red;
-  }
+.panel {
+  background-color: red;
 }

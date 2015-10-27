@@ -1,8 +1,10 @@
-import React from 'react';
+import Default from './styles';
+
+// Components
 import Alert from './components/alert';
 
-export default function(styles) {
+export default function(styles = Default) {
   return {
-    Alert,
+    Alert: Alert(styles),
   };
 }
