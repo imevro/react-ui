@@ -1,10 +1,12 @@
+// Default styles
 import Default from './styles';
 
 // Components
 import Alert from './components/alert';
 
-export default function(styles = Default) {
+export default function({ styles = Default, components = {} }) {
   return {
-    Alert: Alert(styles),
+    Alert: Alert(styles.alert),
+    ...components,
   };
 }

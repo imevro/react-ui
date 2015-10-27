@@ -5,6 +5,7 @@ export default () => {
   return (
     <section>
       <UI.Alert message="test">A L E R T</UI.Alert>
+      <UI.Button>test</UI.Button>
     </section>
   );
 };

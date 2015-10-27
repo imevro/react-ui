@@ -1,9 +1,9 @@
 import React from 'react';
 // import cn from 'classnames';
 
-export default ({ alert }) => props => {
+export default styles => props => {
   return (
-    <div className={alert.panel}>{props.children}</div>
+    <div className={styles.panel}>{props.children}</div>
   );
 };
 
