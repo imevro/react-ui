@@ -1,6 +1,14 @@
 @import './responsive-utils';
 @import './variables';
 
+/* variables */
+
+$xs-padding: 1.93rem;
+$sm-padding-xs: 1.5rem 2rem;
+$sm-padding-md: 2.5rem;
+
+/* end */
+
 .panel {
   background-color: $brand-lighter-grey;
   border-color: $brand-white;
@@ -14,15 +22,14 @@
   }
 }
 
-.body {
-  padding: 1.5rem 2rem;
-  text-align: center;
-
-  @include responsive(sm) {
-    padding: 2.5rem;
-  }
+.xs {
+  padding: $xs-padding;
 }
 
-.text {
-  margin: 2rem 0;
+.sm {
+  padding: $sm-padding-xs;
+
+  @include responsive(md) {
+    padding: $sm-padding-md;
+  }
 }

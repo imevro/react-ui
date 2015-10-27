@@ -3,18 +3,11 @@ import React from 'react';
 
 export default styles => props => {
   return (
-    <div className={styles.panel}>{props.children}</div>
+    <div className={styles.panel}>
+      <div className={styles.body}>
+        <h3 className={styles.title}>{props.message}</h3>
+        {props.children}
+      </div>
+    </div>
   );
 };
-
-// export default (props) => {
-//   return (
-//     <UI.Panel className={cn(`alert-panel`, this.props.className)}>
-//       <div className="alert-panel-body">
-//         <h3 className="alert-panel-body-text">{this.props.message}</h3>
-//
-//         {this.props.children}
-//       </div>
-//     </UI.Panel>
-//   )
-// }

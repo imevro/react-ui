@@ -1,0 +1,131 @@
+@import './variables';
+
+/* base border radius */
+$btn-border-radius-base: 4px;
+/*end*/
+
+/* btn size */
+$btn-sm-padding: .75rem 1.5rem;
+$btn-sm-font-size: 1.3rem;
+$btn-sm-border-radius: $btn-border-radius-base;
+
+$btn-md-padding: 1.1rem 2rem;
+$btn-md-font-size: 1.5rem;
+$btn-md-border-radius: $btn-border-radius-base;
+
+$btn-lg-padding: 1.15rem 1.6rem;
+$btn-lg-font-size: 1.5rem;
+$btn-lg-border-radius: $btn-border-radius-base;
+
+$btn-xlg-padding: 2.4rem 0;
+$btn-xlg-font-size: 1.5rem;
+$btn-xlg-border-radius: 0;
+/* end */
+
+/* Buttons */
+$btn-color-primary:  $brand-primary;
+$btn-color-accent:   $brand-accent;
+$btn-color-default:  $brand-default;
+
+$btn-xlg-border-radius: 2px;
+
+@mixin btn-variant($color) {
+  &,
+  &[disabled]:hover {
+    background-color: $color;
+    border-color: $color;
+    color: $brand-white;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 10%);
+    color: $brand-white;
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    color: $color;
+
+    &:hover {
+      background-color: $color;
+      color: $brand-white;
+    }
+
+    &.active {
+      background-color: $color;
+      border-color: $color;
+      color: $brand-white;
+    }
+  }
+}
+
+@mixin btn-size($padding, $fontSize, $borderRadius) {
+  padding: $padding;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; /* For input.btn */
+  font-weight: inherit;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; /* Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214 */
+  background-color: transparent;
+  border: 1px solid $brand-dark-grey;
+  white-space: nowrap;
+  transition: all 0.3s;
+  padding: .6rem 1.2rem;
+
+  &[disabled] {
+    opacity: .5;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.default {
+  @include btn-variant($btn-color-default);
+}
+
+.primary {
+  @include btn-variant($btn-color-primary);
+}
+
+.accent {
+  @include btn-variant($btn-color-accent);
+}
+
+.sm {
+  @include btn-size($btn-sm-padding, $btn-sm-font-size, $btn-sm-border-radius);
+}
+
+.md {
+  @include btn-size($btn-md-padding, $btn-md-font-size, $btn-md-border-radius);
+}
+
+.lg {
+  @include btn-size($btn-lg-padding, $btn-lg-font-size, $btn-lg-border-radius);
+}
+
+.xlg {
+  @include btn-size($btn-xlg-padding, $btn-xlg-font-size, $btn-xlg-border-radius);
+  border-radius: 0;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
