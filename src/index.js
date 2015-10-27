@@ -19,15 +19,10 @@ export default function(props = defaultProps) {
 
   return {
     Alert: Alert(styles.alert),
-    ...components,
     Panel: Panel(styles.panel),
-    ...components,
     Button: Button(styles.button),
-    ...components,
     Loading: Loading(styles.loading),
-    ...components,
     Label: Label(styles.label),
-    ...components,
     Badges: Badges(styles.badges),
     ...components,
   };
