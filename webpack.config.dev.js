@@ -4,10 +4,10 @@ const path    = require('path');
 const config = {
   entry: [
     'webpack-hot-middleware/client',
-    path.join(__dirname, 'example', 'src', 'app'),
+    path.join(__dirname, 'example', 'app'),
   ],
   output: {
-    path: path.join(__dirname, 'example', 'src'),
+    path: path.join(__dirname, 'example'),
     filename: 'app.js',
     publicPath: '/static/',
   },
@@ -27,7 +27,7 @@ const config = {
     ],
   },
   resolve: {
-    root: path.join(__dirname, 'example', 'src'),
+    root: path.join(__dirname, 'example'),
     extensions: ['', '.js', '.json', '.jsx', '.css', '.svg'],
     alias: {
       'react-ui': path.join(__dirname, 'src'),
