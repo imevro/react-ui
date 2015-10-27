@@ -1,70 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import cn from 'classnames';
 
-export default styles => props => {
-  const className = {
-    [styles.active]: !!props.active,
+export default styles => {
+  return class extends Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        loading: false,
+      };
+    }
+
+    componentWillMount() {
+      this.timeoutId = setTimeout(() => {
+        this.setState({ loading: true });
+      }, 300);
+    }
+
+    componentWillUnmount() {
+      clearTimeout(this.timeoutId);
+    }
+
+    render() {
+      const className = {
+        [styles.active]: !!this.state.loading,
+      };
+
+      return (
+        <div {...this.props} className={cn(styles.loading, className, this.props.className)}>
+          <div className={styles.element}>
+            <div className={styles.item}></div>
+            <div className={styles.item}></div>
+            <div className={styles.item}></div>
+          </div>
+        </div>
+      );
+    }
   };
-
-  return (
-  <div {...props} className={cn(styles.loading, className, props.className)}>
-    <div className={styles.element}>
-      <div className={styles.item}></div>
-      <div className={styles.item}></div>
-      <div className={styles.item}></div>
-    </div>
-  </div>
-  );
 };
-
-
-// import React, { Component } from 'react';
-// import cn from 'classnames';
-//
-// import UI from './index';
-//
-// import 'styles/ui/loading';
-//
-// class Loading extends Component {
-//   constructor(props) {
-//     super(props);
-//
-//     this.state = {
-//       loading: false,
-//       error: false,
-//     };
-//   }
-//
-//   componentWillMount() {
-//     this.timeoutId = setTimeout(() => {
-//       this.setState({ loading: true });
-//     }, 300);
-//
-//     this.errorTimeoutId = setTimeout(() => {
-//       this.setState({ error: true });
-//     }, 15000);
-//   }
-//
-//   componentWillUnmount() {
-//     clearTimeout(this.timeoutId);
-//     clearTimeout(this.errorTimeoutId);
-//   }
-//
-//   render() {
-//     if (this.state.error) {
-//       return <UI.Alert message="Timeout" />;
-//     } else {
-//       return (
-//         <div className={cn(`loading`, this.state.loading ? `active` : null)}>
-//           <div className="loading-element">
-//             <div className="loading-element-item"></div>
-//             <div className="loading-element-item"></div>
-//             <div className="loading-element-item"></div>
-//           </div>
-//         </div>
-//       );
-//     }
-//   }
-// }
-//
-// export default Loading;

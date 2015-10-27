@@ -4,7 +4,7 @@ import UI from 'components/ui';
 export default () => {
   return (
     <section>
-      <UI.Loading active></UI.Loading>
+      <UI.Loading />
     </section>
   );
 };
