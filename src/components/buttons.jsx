@@ -13,6 +13,5 @@ export default styles => props => {
     <button {...props} className={cn(styles.btn, className, props.className)}>
       {props.children}
     </button>
-
   );
 };
