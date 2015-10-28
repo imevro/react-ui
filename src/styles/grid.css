@@ -7,9 +7,9 @@ $screen-md: 992px;
 $screen-lg: 1200px;
 
 $container-xs: 100%;
-$container-sm: (720px + $grid-gutter-width);
-$container-md: (940px + $grid-gutter-width);
-$container-lg: (1140px + $grid-gutter-width);
+$container-sm: resolve(720px + $grid-gutter-width);
+$container-md: resolve(940px + $grid-gutter-width);
+$container-lg: resolve(1140px + $grid-gutter-width);
 
 @mixin make-container($type: fluid) {
   margin-right: auto;
