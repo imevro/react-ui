@@ -12,6 +12,7 @@ $container-md: resolve(940px + $grid-gutter-width);
 $container-lg: resolve(1140px + $grid-gutter-width);
 
 @mixin make-container($type: fluid) {
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
   padding-right: resolve($grid-gutter-width/2);
@@ -43,6 +44,7 @@ $container-lg: resolve(1140px + $grid-gutter-width);
 }
 
 @mixin make-row() {
+  box-sizing: border-box;
   margin-left: resolve(-($grid-gutter-width/2));
   margin-right: resolve(-($grid-gutter-width/2));
 
@@ -57,18 +59,17 @@ $container-lg: resolve(1140px + $grid-gutter-width);
   }
 }
 
-/*@include responsive(sm) {
-  width: resolve($columns / $grid-columns * 100)%;
-}*/
-
 @mixin make-column($media, $columns) {
+  box-sizing: border-box;
   position: relative;
   float: left;
   min-height: 1px;
   padding-right: resolve($grid-gutter-width/2);
   padding-left: resolve($grid-gutter-width/2);
 
-  @if $media == sm {
+  @if $media == xs {
+    width: resolve($columns / $grid-columns * 100)%;
+  } @else if $media == sm {
     @media (min-width: $screen-sm) {
       width: resolve($columns / $grid-columns * 100)%;
     }
@@ -117,15 +118,21 @@ $container-lg: resolve(1140px + $grid-gutter-width);
   .xs-$i {
     @include make-column(xs, $i);
   }
+}
 
+@for $i from 1 to 12 {
   .sm-$i {
     @include make-column(sm, $i);
   }
+}
 
+@for $i from 1 to 12 {
   .md-$i {
     @include make-column(md, $i);
   }
+}
 
+@for $i from 1 to 12 {
   .lg-$i {
     @include make-column(lg, $i);
   }
