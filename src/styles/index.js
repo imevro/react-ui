@@ -6,6 +6,7 @@ import label from './label';
 import badges from './badges';
 import grid from './grid';
 import images from './images';
+import table from './table';
 
 export default {
   alert,
@@ -16,4 +17,5 @@ export default {
   badges,
   grid,
   images,
+  table,
 };

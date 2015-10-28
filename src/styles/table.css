@@ -1,0 +1,56 @@
+/* variables */
+$color: #ccc;
+$padding: .8rem;
+$striped-color: #ddd;
+$border: 1px solid $color;
+$border-top: 1px solid $color;
+$border-bottom: 2px solid $color;
+
+/* table */
+.table {
+  max-width: 100%;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.bordered {
+  border: $border;
+}
+
+.responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
+/* row */
+.row {
+  padding: 0;
+}
+
+.striped {
+  background-color: $striped-color;
+}
+
+
+/* cell */
+.cell {
+  padding: $padding;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: $border-top;
+}
+
+.heading {
+  padding: $padding;
+  line-height: 1.42857143;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: $border-bottom;
+}
+
+.bordered {
+  border: $border;
+}
