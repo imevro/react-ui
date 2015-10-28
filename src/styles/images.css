@@ -5,6 +5,7 @@ $rounded-border-radius: .6rem;
 
 $bordered-space-between-border: .4rem;
 $bordered-border: 1px solid $brand-primary;
+$bordered-border-radius: .4rem;
 /*  */
 
 .img {
@@ -29,6 +30,7 @@ $bordered-border: 1px solid $brand-primary;
   line-height: 1.42857143;
   background-color: $brand-white;
   border: $bordered-border;
+  border-radius: $bordered-border-radius;
   transition: all .2s ease-in-out;
 }
 /* end */
