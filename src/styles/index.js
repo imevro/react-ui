@@ -5,6 +5,7 @@ import loading from './loading';
 import label from './label';
 import badges from './badges';
 import grid from './grid';
+import images from './images';
 
 export default {
   alert,
@@ -14,4 +15,5 @@ export default {
   label,
   badges,
   grid,
+  images,
 };

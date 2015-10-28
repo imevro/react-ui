@@ -9,6 +9,7 @@ import Loading from './components/loading';
 import Label from './components/label';
 import Badges from './components/badges';
 import { Container, Row, Col } from './components/grid';
+import Image from './components/images';
 
 const defaultProps = {
   styles: Default,
@@ -25,6 +26,7 @@ export default function(props = defaultProps) {
     Loading: Loading(styles.loading),
     Label: Label(styles.label),
     Badges: Badges(styles.badges),
+    Image: Image(styles.images),
 
     Container: Container(styles.grid),
     Row: Row(styles.grid),
