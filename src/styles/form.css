@@ -1,0 +1,142 @@
+@import './variables';
+
+/* variables */
+$border-radius: .4rem;
+$padding-xs: .3rem 1.2rem;
+$padding-sm: .6rem 1.2rem;
+$padding-md: 1rem 1.2rem;
+$padding-lg: 1.2rem 1.2rem;
+
+.form {
+  margin: 0;
+  display: block;
+}
+
+.group {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.formControl {
+  box-sizing: border-box;
+  height: auto;
+  padding: .6rem 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.42857143;
+  color: $brand-black;
+  background-color: $brand-white;
+  background-image: none;
+  border: 1px solid $brand-grey;
+  border-radius: $border-radius;
+  transition: border-color ease-in-out .15s,
+              box-shadow ease-in-out .15s;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+  }
+}
+
+.checkbox {
+  width: auto;
+  margin: .1rem 0 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  background-color: #fff;
+  transition: background-color .3s;
+}
+
+.checkboxControl {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  background-color: $brand-white;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  margin-right: .1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    transition: background-color 0.3s;
+  }
+
+  &:checked {
+    border-color: $brand-primary;
+    background: $brand-primary;
+
+    &:before {
+      background-color: $brand-primary;
+      content: "";
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+}
+
+/* kind */
+
+.default {
+  &:focus,
+  &:active {
+    border-color: $brand-default;
+    outline: 0;
+  }
+}
+
+.primary {
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    outline: 0;
+  }
+}
+
+.accent {
+  &:focus,
+  &:active {
+    border-color: $brand-accent;
+    outline: 0;
+  }
+}
+
+/* size */
+.xs {
+  padding: $padding-xs;
+}
+
+.sm {
+  padding: $padding-sm;
+}
+
+.md {
+  padding: $padding-md;
+}
+
+.lg {
+  padding: $padding-lg;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}

@@ -11,6 +11,7 @@ import Badges from './components/badges';
 import { Container, Row, Col } from './components/grid';
 import Image from './components/images';
 import Table from './components/table';
+import Form from './components/form';
 
 const defaultProps = {
   styles: Default,
@@ -34,6 +35,14 @@ export default function(props = defaultProps) {
       Row: Table.Row(styles.table),
       Cell: Table.Cell(styles.table),
       Heading: Table.Heading(styles.table),
+    },
+
+    Form: {
+      Container: Form.Container(styles.form),
+      Group: Form.Group(styles.form),
+      Input: Form.Input(styles.form),
+      Label: Form.Label(styles.form),
+      Checkbox: Form.Checkbox(styles.form),
     },
 
     Container: Container(styles.grid),

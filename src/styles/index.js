@@ -7,6 +7,7 @@ import badges from './badges';
 import grid from './grid';
 import images from './images';
 import table from './table';
+import form from './form';
 
 export default {
   alert,
@@ -18,4 +19,5 @@ export default {
   grid,
   images,
   table,
+  form,
 };

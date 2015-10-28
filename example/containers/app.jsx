@@ -3,103 +3,31 @@ import UI from 'components/ui';
 
 export default () => {
   return (
-    <div>
-      <UI.Table.Container repsonsive width="1000" bordered>
-        <UI.Table.Row>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-      </UI.Table.Container>
-      <UI.Table.Container>
-        <UI.Table.Row>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-          <UI.Table.Heading bordered>Table cell</UI.Table.Heading>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-      </UI.Table.Container>
-      <UI.Table.Container>
-        <UI.Table.Row>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-        <UI.Table.Row striped>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-          <UI.Table.Cell bordered>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-      </UI.Table.Container>
-      <UI.Table.Container>
-        <UI.Table.Row>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-          <UI.Table.Heading>Table cell</UI.Table.Heading>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-        <UI.Table.Row>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-          <UI.Table.Cell>Table cell</UI.Table.Cell>
-        </UI.Table.Row>
-      </UI.Table.Container>
-    </div>
+    <UI.Form.Container>
+      <UI.Form.Group>
+        <UI.Form.Label>label</UI.Form.Label>
+        <UI.Form.Input size="xs" placeholder="Email" type="email" />
+      </UI.Form.Group>
+      <UI.Form.Group>
+        <UI.Form.Label>label</UI.Form.Label>
+        <UI.Form.Input size="sm" kind="default" placeholder="Email" type="email" />
+      </UI.Form.Group>
+      <UI.Form.Group>
+        <UI.Form.Label>label</UI.Form.Label>
+        <UI.Form.Input size="md" kind="primary" block placeholder="Email" type="email" />
+      </UI.Form.Group>
+      <UI.Form.Group>
+        <UI.Form.Label>label</UI.Form.Label>
+        <UI.Form.Input size="lg" kind="accent" placeholder="Email" type="email" />
+      </UI.Form.Group>
+      <UI.Form.Group>
+        <UI.Form.Label>label</UI.Form.Label>
+        <UI.Form.Input size="lg" kind="accent" placeholder="Email" type="email" />
+        <UI.Form.Checkbox>checkbox</UI.Form.Checkbox>
+        <UI.Form.Checkbox>checkbox</UI.Form.Checkbox>
+        <UI.Form.Checkbox>checkbox</UI.Form.Checkbox>
+      </UI.Form.Group>
+      <UI.Button kind="primary" size="lg">button</UI.Button>
+    </UI.Form.Container>
   );
 };
