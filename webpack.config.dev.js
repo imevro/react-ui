@@ -48,6 +48,7 @@ const config = {
     require('postcss-for'),
     require('postcss-conditionals'),
     require('postcss-simple-vars'),
+    require('postcss-color-function'),
     require('postcss-mathjs'),
     require('postcss-nested'),
     require('autoprefixer')({ browsers: ['last 2 versions'] }),

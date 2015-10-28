@@ -1,0 +1,38 @@
+@mixin btn-variant($color) {
+  &,
+  &[disabled]:hover {
+    background-color: $color;
+    border-color: $color;
+    color: $brand-white;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    background-color: color($color blackness(10%));
+    border-color: color($color blackness(10%));
+    color: $brand-white;
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    color: $color;
+
+    &:hover {
+      background-color: $color;
+      color: $brand-white;
+    }
+
+    &.active {
+      background-color: $color;
+      border-color: $color;
+      color: $brand-white;
+    }
+  }
+}
+
+@mixin btn-size($padding, $fontSize, $borderRadius) {
+  padding: $padding;
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+}

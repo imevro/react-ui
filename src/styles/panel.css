@@ -1,12 +1,10 @@
-@import './responsive-utils';
+@import './mixins/responsive-utils';
 @import './variables';
 
 /* variables */
-
 $xs-padding: 1.93rem;
 $sm-padding-xs: 1.5rem 2rem;
 $sm-padding-md: 2.5rem;
-
 /* end */
 
 .panel {

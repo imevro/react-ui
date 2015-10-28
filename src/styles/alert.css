@@ -1,4 +1,4 @@
-@import './responsive-utils';
+@import './mixins/responsive-utils';
 @import './variables';
 
 .panel {
