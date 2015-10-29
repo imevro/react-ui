@@ -40,6 +40,7 @@
     "file-loader": "^0.8.4",
     "html-webpack-plugin": "^1.6.2",
     "husky": "^0.10.1",
+    "normalize.css": "^3.0.3",
     "postcss-color-function": "^2.0.0",
     "postcss-conditionals": "^2.0.0",
     "postcss-for": "^2.0.0",

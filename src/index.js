@@ -41,8 +41,12 @@ export default function(props = defaultProps) {
       Container: Form.Container(styles.form),
       Group: Form.Group(styles.form),
       Input: Form.Input(styles.form),
+      Textarea: Form.Textarea(styles.form),
       Label: Form.Label(styles.form),
       Checkbox: Form.Checkbox(styles.form),
+      Radio: Form.Radio(styles.form),
+      Select: Form.Select(styles.form),
+      Static: Form.Static(styles.form),
     },
 
     Container: Container(styles.grid),
