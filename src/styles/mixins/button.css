@@ -13,22 +13,6 @@
     border-color: color($color blackness(10%));
     color: $brand-white;
   }
-
-  &.btn-outline {
-    background-color: transparent;
-    color: $color;
-
-    &:hover {
-      background-color: $color;
-      color: $brand-white;
-    }
-
-    &.active {
-      background-color: $color;
-      border-color: $color;
-      color: $brand-white;
-    }
-  }
 }
 
 @mixin btn-size($padding, $fontSize, $borderRadius) {
