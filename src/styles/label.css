@@ -33,10 +33,11 @@ $label-color: #111;
   @include badges-mixin($brand-accent, $brand-white, transparent);
 }
 
-/*.success {
+.success {
   @include badges-mixin($brand-success, $brand-white, transparent);
 }
 
+/*
 .info {
   @include badges-mixin($brand-info, $brand-white, transparent);
 }
