@@ -33,6 +33,16 @@ $padding-lg: 1rem .7rem 0;
   display: block;
   margin-bottom: 1.5rem;
 
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+
   &.xs {
     @include size($padding-input-xs, $padding-xs);
   }

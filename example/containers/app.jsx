@@ -11,12 +11,14 @@ export default () => {
 
       <UI.Form.Group size="xs">
         <UI.Form.Label>Input</UI.Form.Label>
-        <UI.Form.Input kind="primary" placeholder="Email" type="email" />
+        <UI.Form.Input kind="accent" placeholder="Email" type="email" />
       </UI.Form.Group>
 
       <UI.Form.Group size="sm">
-        <UI.Form.Label>Input block</UI.Form.Label>
-        <UI.Form.Input kind="primary" block placeholder="Email" type="email" />
+        <UI.Col sm="12">
+          <UI.Form.Label>Input block</UI.Form.Label>
+          <UI.Form.Input kind="primary" block placeholder="Email" type="email" />
+        </UI.Col>
       </UI.Form.Group>
 
       <UI.Form.Group size="lg" inline>
