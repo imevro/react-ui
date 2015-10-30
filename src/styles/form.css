@@ -3,15 +3,13 @@
 /* variables */
 $border-radius: .4rem;
 
-$padding-input-xs: .3rem 1.2rem;
+$padding-input-xs: .5rem 1rem;
 $padding-input-sm: .6rem 1.2rem;
-$padding-input-md: 1rem 1.2rem;
-$padding-input-lg: 1.2rem 1.2rem;
+$padding-input-lg: 1rem 1.6rem;
 
-$padding-xs: .7rem .7rem 0;
+$padding-xs: .9rem .7rem 0;
 $padding-sm: 1rem .7rem 0;
-$padding-md: 1.4rem .7rem 0;
-$padding-lg: 1.6rem .7rem 0;
+$padding-lg: 1.4rem .7rem 0;
 
 /* mixin */
 @mixin size($input, $label) {
@@ -41,10 +39,6 @@ $padding-lg: 1.6rem .7rem 0;
 
   &.sm {
     @include size($padding-input-sm, $padding-sm);
-  }
-
-  &.md {
-    @include size($padding-input-md, $padding-md);
   }
 
   &.lg {

@@ -19,11 +19,6 @@ export default () => {
         <UI.Form.Input kind="primary" block placeholder="Email" type="email" />
       </UI.Form.Group>
 
-      <UI.Form.Group size="md" inline>
-        <UI.Form.Label>Input formGroup inline</UI.Form.Label>
-        <UI.Form.Input kind="accent" placeholder="Email" type="email" />
-      </UI.Form.Group>
-
       <UI.Form.Group size="lg" inline>
         <UI.Form.Label>Input formGroup inline</UI.Form.Label>
         <UI.Form.Input kind="accent" placeholder="Email" type="email" />
@@ -60,7 +55,7 @@ export default () => {
         ]} />
       </UI.Form.Group>
 
-      <UI.Form.Group size="md">
+      <UI.Form.Group size="lg">
         <UI.Form.Label block>Select</UI.Form.Label>
         <UI.Form.Select kind="primary" ranged placeholder="Select" options={[
           { value: `one`, label: `one` },
