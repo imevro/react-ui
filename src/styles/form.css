@@ -7,9 +7,9 @@ $padding-input-xs: .5rem 1rem;
 $padding-input-sm: .6rem 1.2rem;
 $padding-input-lg: 1rem 1.6rem;
 
-$padding-xs: .9rem .7rem 0;
-$padding-sm: 1rem .7rem 0;
-$padding-lg: 1.4rem .7rem 0;
+$padding-xs: .5rem .7rem 0;
+$padding-sm: .6rem .7rem 0;
+$padding-lg: 1rem .7rem 0;
 
 /* mixin */
 @mixin size($input, $label) {
@@ -67,7 +67,9 @@ $padding-lg: 1.4rem .7rem 0;
   max-width: 100%;
   margin-bottom: 5px;
   margin-right: .5rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1.42857143;
 }
 
 .formControl {
@@ -177,6 +179,7 @@ $padding-lg: 1.4rem .7rem 0;
 .static {
   display: inline-block;
   margin: 0;
+  font-size: 1.3rem;
 }
 
 /* display */

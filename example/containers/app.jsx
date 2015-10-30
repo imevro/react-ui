@@ -108,18 +108,18 @@ export default () => {
         </UI.Col>
       </UI.Form.Group>
       <UI.Form.Group horizontal size="sm">
-        <UI.Col md="2">
+        <UI.Col md="4">
           <UI.Form.Label block>Horizontal</UI.Form.Label>
         </UI.Col>
-        <UI.Col md="10">
+        <UI.Col md="8">
           <UI.Form.Static>example@my.com</UI.Form.Static>
         </UI.Col>
       </UI.Form.Group>
       <UI.Form.Group horizontal size="lg">
-        <UI.Col md="2">
+        <UI.Col md="4">
           <UI.Form.Label block>Horizontal</UI.Form.Label>
         </UI.Col>
-        <UI.Col md="10">
+        <UI.Col md="8">
           <UI.Form.Static>example@my.com</UI.Form.Static>
         </UI.Col>
       </UI.Form.Group>
