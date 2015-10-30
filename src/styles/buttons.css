@@ -27,6 +27,7 @@ $btn-xlg-border-radius: 0;
 $btn-color-primary:  $brand-primary;
 $btn-color-accent:   $brand-accent;
 $btn-color-default:  $brand-default;
+$btn-color-danger:   $brand-danger;
 
 $btn-xlg-border-radius: 2px;
 
@@ -69,6 +70,10 @@ $btn-xlg-border-radius: 2px;
 
 .accent {
   @include btn-variant($btn-color-accent);
+}
+
+.danger {
+  @include btn-variant($btn-color-danger);
 }
 
 .sm {

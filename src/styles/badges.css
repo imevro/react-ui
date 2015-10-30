@@ -38,6 +38,10 @@ $badge-border-radius: 50%;
   @include badges-mixin($brand-success, $brand-white, transparent);
 }
 
+.danger {
+  @include badges-mixin($brand-danger, $brand-white, transparent);
+}
+
 /*
 .info {
   @include badges-mixin($brand-info, $brand-white, transparent);
