@@ -7,7 +7,7 @@ export default styles => props => {
   };
 
   return (
-    <th {...props} className={cn(styles.heading, className)}>
+    <th {...props} className={cn(styles.heading, className, props.className)}>
       {props.children}
     </th>
   );

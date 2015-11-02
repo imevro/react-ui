@@ -13,7 +13,7 @@ export default styles => props => {
   if (responsive) {
     return (
       <div className={styles.responsive}>
-        <table {...props} className={cn(styles.table, className)}>
+        <table {...props} className={cn(styles.table, className, props.className)}>
           <tbody>
             {props.children}
           </tbody>
@@ -22,7 +22,7 @@ export default styles => props => {
     );
   } else {
     return (
-      <table {...props} className={cn(styles.table, className)}>
+      <table {...props} className={cn(styles.table, className, props.className)}>
         <tbody>
           {props.children}
         </tbody>

@@ -7,7 +7,7 @@ export default styles => props => {
   };
 
   return (
-    <td {...props} className={cn(styles.cell, className)}>
+    <td {...props} className={cn(styles.cell, className, props.className)}>
       {props.children}
     </td>
   );

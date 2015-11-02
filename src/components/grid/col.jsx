@@ -12,7 +12,7 @@ export default styles => props => {
   };
 
   return (
-    <div className={cn(className)}>
+    <div className={cn(className, props.className)}>
       {props.children}
     </div>
   );
