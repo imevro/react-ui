@@ -6,3 +6,4 @@ build
 .tmp
 test-reports
 import/*
+styles

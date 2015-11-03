@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
 
-export default styles => {
+export default (styles = {}) => {
   return class extends Component {
     constructor(props) {
       super(props);

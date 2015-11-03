@@ -1,19 +1,19 @@
 {
-  "name": "react-ui",
-  "version": "0.0.1",
+  "name": "@react-ui/core",
+  "version": "0.0.7",
   "description": "",
   "main": "lib/index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "clean": "rimraf build",
+    "clean": "rimraf lib",
     "start": "NODE_ENV=development node webpack.server.development.js",
-    "build": "NODE_ENV=production webpack -p --config webpack.config.production.js",
+    "build": "NODE_ENV=production babel src --out-dir lib",
     "lint": "eslint --ext .jsx --ext .js src example",
     "test": "npm run lint",
-    "test:production": "exit 0",
-    "precommit": "npm test"
+    "precommit": "npm test",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "html-webpack-plugin": "^1.6.2",
     "husky": "^0.10.1",
     "normalize.css": "^3.0.3",
+    "postcss-cli": "^2.3.2",
     "postcss-color-function": "^2.0.0",
     "postcss-conditionals": "^2.0.0",
     "postcss-for": "^2.0.0",
@@ -55,11 +56,13 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.4.1"
+    "webpack-hot-middleware": "^2.4.1",
+    "react-dom": "^0.14.2"
   },
   "dependencies": {
-    "classnames": "^2.2.0",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "classnames": "^2.2.0"
+  },
+  "peerDependecies": {
+    "react": "^0.14.2"
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-export default styles => props => {
+export default (styles = {}) => props => {
   return (
     <div className={cn(styles.panel, props.className)}>
       <div className={styles.body}>

@@ -1,25 +1,16 @@
-// Default styles
-import Default from './styles';
-
-// Components
 import Alert from './components/alert';
 import Panel from './components/panel';
-import Button from './components/buttons';
+import Button from './components/button';
 import Loading from './components/loading';
 import Label from './components/label';
-import Badges from './components/badges';
-import { Container, Row, Col } from './components/grid';
-import Image from './components/images';
+import Badge from './components/badge';
+import Grid from './components/grid';
+import Image from './components/image';
 import Table from './components/table';
 import Form from './components/form';
 
-const defaultProps = {
-  styles: Default,
-  components: {},
-};
-
-export default function(props = defaultProps) {
-  const { styles, components } = props;
+export default function(props = {}) {
+  const { styles = {}, components = {} } = props;
 
   return {
     Alert: Alert(styles.alert),
@@ -27,8 +18,8 @@ export default function(props = defaultProps) {
     Button: Button(styles.button),
     Loading: Loading(styles.loading),
     Label: Label(styles.label),
-    Badges: Badges(styles.badges),
-    Image: Image(styles.images),
+    Badge: Badge(styles.badge),
+    Image: Image(styles.image),
 
     Table: {
       Container: Table.Container(styles.table),
@@ -49,9 +40,12 @@ export default function(props = defaultProps) {
       Static: Form.Static(styles.form),
     },
 
-    Container: Container(styles.grid),
-    Row: Row(styles.grid),
-    Col: Col(styles.grid),
+    Grid: {
+      Container: Grid.Container(styles.grid),
+      Row: Grid.Row(styles.grid),
+      Col: Grid.Col(styles.grid),
+    },
+
     ...components,
   };
 }
