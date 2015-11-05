@@ -8,6 +8,7 @@ import Grid from './components/grid';
 import Image from './components/image';
 import Table from './components/table';
 import Form from './components/form';
+import Media from './components/media';
 
 export default function(props = {}) {
   const { styles = {}, components = {} } = props;
@@ -20,6 +21,7 @@ export default function(props = {}) {
     Label: Label(styles.label),
     Badge: Badge(styles.badge),
     Image: Image(styles.image),
+    Media: Media(styles.media),
 
     Table: {
       Container: Table.Container(styles.table),

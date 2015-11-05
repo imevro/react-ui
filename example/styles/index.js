@@ -1,7 +1,5 @@
-import alert from './alert';
-import button from './button';
+import media from './media';
 
 export default {
-  alert,
-  button,
+  media,
 };

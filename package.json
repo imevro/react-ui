@@ -60,7 +60,8 @@
     "react-dom": "^0.14.2"
   },
   "dependencies": {
-    "classnames": "^2.2.0"
+    "classnames": "^2.2.0",
+    "react": "^0.14.2"
   },
   "peerDependecies": {
     "react": "^0.14.2"
