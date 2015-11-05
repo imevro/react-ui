@@ -1,6 +1,6 @@
 {
   "name": "@react-ui/core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-ui-by-dtrussia-wip/react-ui.git"
+    "url": "git+https://github.com/dtrussia/react-ui-core.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-ui-by-dtrussia-wip/react-ui/issues"
+    "url": "https://github.com/dtrussia/react-ui-core/issues"
   },
-  "homepage": "https://github.com/react-ui-by-dtrussia-wip/react-ui#readme",
+  "homepage": "https://github.com/dtrussia/react-ui-core#readme",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-core": "^5.8.29",
