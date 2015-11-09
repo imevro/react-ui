@@ -13,11 +13,11 @@ export default (styles = {}) => props => {
     [styles[`xs-${xs}`]]: !!xs,
     [styles[`xs-offset-${xsOffset}`]]: !!xsOffset,
     [styles[`sm-${sm}`]]: !!sm,
-    [styles[`xs-offset-${smOffset}`]]: !!smOffset,
+    [styles[`sm-offset-${smOffset}`]]: !!smOffset,
     [styles[`md-${md}`]]: !!md,
-    [styles[`xs-offset-${mdOffset}`]]: !!mdOffset,
+    [styles[`md-offset-${mdOffset}`]]: !!mdOffset,
     [styles[`lg-${lg}`]]: !!lg,
-    [styles[`xs-offset-${lgOffset}`]]: !!lgOffset,
+    [styles[`lg-offset-${lgOffset}`]]: !!lgOffset,
   };
 
   return (
