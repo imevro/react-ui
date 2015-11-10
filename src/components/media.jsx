@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 export default (styles = {}) => props => {
   return (
-    <div className={cn(styles.media, props.className)}>
+    <div {...props} className={cn(styles.media, props.className)}>
       {props.left &&
         <div className={styles.left}>
           {props.left}

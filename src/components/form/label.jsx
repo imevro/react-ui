@@ -7,7 +7,7 @@ export default (styles = {}) => props => {
   };
 
   return (
-    <label className={cn(styles.label, className, props.className)}>
+    <label {...props} className={cn(styles.label, className, props.className)}>
       {props.children}
     </label>
   );

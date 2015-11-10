@@ -9,7 +9,7 @@ export default (styles = {}) => props => {
   };
 
   return (
-    <div className={cn(styles.group, className, props.className)}>
+    <div {...props} className={cn(styles.group, className, props.className)}>
       {props.children}
     </div>
   );

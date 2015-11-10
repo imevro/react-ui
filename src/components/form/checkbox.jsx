@@ -20,7 +20,7 @@ export default (styles = {}) => {
       };
 
       return (
-        <div className={cn(styles.checkbox, { active: this.props.value }, className)}>
+        <div {...this.props} className={cn(styles.checkbox, { active: this.props.value }, className)}>
           {JSON.stringify(this.props.value)}
           <label className={styles.checkboxLabel}>
             <input className={styles.checkboxControl} type="checkbox" defaultChecked={this.props.value} ref={this.props.reference} onChange={::this.handleChange} /> &nbsp;

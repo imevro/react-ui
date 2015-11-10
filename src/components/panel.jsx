@@ -7,7 +7,7 @@ export default (styles = {}) => props => {
   };
 
   return (
-    <div className={cn(styles.panel, className, props.className)}>
+    <div {...props} className={cn(styles.panel, className, props.className)}>
       {props.children}
     </div>
   );
