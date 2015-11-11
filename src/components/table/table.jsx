@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 export default (styles = {}) => props => {
   const responsive = {
-    [styles.responsive]: !!styles.responsive,
+    [styles.responsive]: !!props.responsive,
   };
 
   const className = {
