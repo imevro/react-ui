@@ -1,10 +1,11 @@
 import React from 'react';
+import Form from 'react-auto-form';
 import cn from 'classnames';
 
 export default (styles = {}) => props => {
   return (
-    <form {...props} className={cn(styles.form, props.className)}>
+    <Form {...props} className={cn(styles.form, props.className)}>
       {props.children}
-    </form>
+    </Form>
   );
 };
