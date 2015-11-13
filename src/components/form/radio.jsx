@@ -20,10 +20,10 @@ export default (styles = {}) => {
       };
 
       return (
-        <div {...this.props} className={cn(styles.radio, { active: this.props.value }, className, this.props.className)}>
+        <div className={cn(styles.radio, { active: this.props.value }, className, this.props.className)}>
           {JSON.stringify(this.props.value)}
           <label className={styles.radioLabel}>
-            <input className={styles.radioControl} type="radio" defaultChecked={this.props.value} ref={this.props.reference} onChange={::this.handleChange} /> &nbsp;
+            <input {...this.props} className={styles.radioControl} type="radio" defaultChecked={this.props.value} ref={this.props.reference} onChange={::this.handleChange} /> &nbsp;
             {this.props.children}
           </label>
         </div>
