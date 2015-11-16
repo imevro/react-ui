@@ -1,7 +1,7 @@
 const os = require('os');
 const exec = require('child_process').exec;
+const env = process.env.NODE_ENV;
 
-const env = 'NODE_ENV=production'
 const buildCmd = 'babel src --out-dir lib';
 
 if (os.type() === 'Windows_NT') {

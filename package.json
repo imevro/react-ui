@@ -1,6 +1,6 @@
 {
   "name": "@react-ui/core",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -9,11 +9,11 @@
   "scripts": {
     "clean": "rimraf lib",
     "start": "NODE_ENV=development node webpack.server.development.js",
-    "build": "node npm-scripts/build.js",
+    "build": "NODE_ENV=production node npm-scripts/build.js",
     "lint": "eslint --ext .jsx --ext .js src example",
     "test": "npm run lint",
     "precommit": "npm test",
-    "postinstall": "npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
