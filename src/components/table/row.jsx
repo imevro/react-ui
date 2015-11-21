@@ -4,7 +4,7 @@ import cn from 'classnames';
 export default (styles = {}) => props => {
   const className = {
     [styles.striped]: !!props.striped,
-    [styles.kind]: !!props.kind,
+    [styles[props.kind]]: !!props.kind,
   };
 
   return (
