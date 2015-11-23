@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 export default (styles = {}) => props => {
-  const classNameBlock = {
+  const block = {
     [styles.block]: !!props.block,
   };
 
@@ -13,7 +13,7 @@ export default (styles = {}) => props => {
   };
 
   return (
-    <div className={cn(styles.selectWrapper, classNameBlock)}>
+    <div className={cn(styles.selectWrapper, block)}>
       <select {...props} defaultValue="null" className={cn(styles.formControl, styles.select, className, props.className)}>
         <option value="null" className={styles.selectPlaceholder}>{props.placeholder}</option>
         {props.options.map(option =>
