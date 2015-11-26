@@ -1,5 +1,7 @@
-import media from './media';
+import btngroup from './btngroup';
+import button from './button';
 
 export default {
-  media,
+  btngroup,
+  button,
 };

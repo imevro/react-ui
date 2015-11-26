@@ -1,0 +1,39 @@
+.btnGroup {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; /* match .btn alignment given font-size hack above */
+
+  > button,
+  > a {
+    position: relative;
+    float: left;
+  }
+
+  button + button,
+  button + a,
+  a + button,
+  a + a {
+    margin-left: -1px;
+  }
+
+  > button:not(:first-child):not(:last-child),
+  > a:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+
+  > button:first-child,
+  > a:first-child {
+    margin-left: 0;
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  > button:last-child:not(:first-child),
+  > a:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

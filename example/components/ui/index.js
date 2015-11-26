@@ -4,13 +4,13 @@ import ReactUI from 'react-ui';
 import styles from 'styles';
 
 // Custom components, override supported!
-import Media from './media';
+import BtnGroup from './btngroup';
 
 // Init
 const UI = ReactUI({
   styles,
   components: {
-    Media: Media(styles.media),
+    BtnGroup: BtnGroup(styles.btngroup),
   },
 });
 
