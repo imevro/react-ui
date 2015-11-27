@@ -18,12 +18,12 @@ export default function(props = {}) {
     Alert: Alert(styles.alert),
     Panel: Panel(styles.panel),
     Button: Button(styles.button),
+    BtnGroup: BtnGroup(styles.button),
     Loading: Loading(styles.loading),
     Label: Label(styles.label),
     Badge: Badge(styles.badge),
     Image: Image(styles.image),
     Media: Media(styles.media),
-    BtnGroup: BtnGroup(styles.btngroup),
 
     Table: {
       Container: Table.Container(styles.table),

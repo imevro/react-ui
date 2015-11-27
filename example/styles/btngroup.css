@@ -1,38 +1,28 @@
+/* BtnGroup */
+
+$default-border-radius: 2px;
+
 .btnGroup {
   position: relative;
   display: inline-block;
-  vertical-align: middle; /* match .btn alignment given font-size hack above */
+  vertical-align: middle;
 
-  > button,
-  > a {
+  .btn {
     position: relative;
     float: left;
-  }
-
-  button + button,
-  button + a,
-  a + button,
-  a + a {
     margin-left: -1px;
-  }
-
-  > button:not(:first-child):not(:last-child),
-  > a:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
 
-  > button:first-child,
-  > a:first-child {
+  .btn:first-child {
     margin-left: 0;
-
-    &:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+    border-radius: $default-border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  > button:last-child:not(:first-child),
-  > a:last-child:not(:first-child) {
+  .btn:last-child {
+    border-radius: $default-border-radius;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

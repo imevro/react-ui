@@ -24,6 +24,8 @@ $font-size-base: 13px;
 $line-height-base: 1.428571429 !default;
 /*$line-height-computed: floor(($font-size-base * $line-height-base));*/
 
+$default-border-radius: 2px;
+
 @mixin btn-variant($color) {
   &,
   &[disabled]:hover {
@@ -72,7 +74,7 @@ $btn-lg-font-size: 1.6rem;
   background-image: none;
   background-color: transparent;
   border: 1px solid #eee;
-  border-radius: 2px;
+  border-radius: $default-border-radius;
   white-space: nowrap;
   text-transform: uppercase;
   transition: all 0.3s;
@@ -136,4 +138,32 @@ $btn-lg-font-size: 1.6rem;
 .block {
   display: block;
   width: 100%;
+}
+
+/* BtnGroup */
+
+.btnGroup {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  .btn {
+    position: relative;
+    float: left;
+    margin-left: -1px;
+    border-radius: 0;
+  }
+
+  .btn:first-child {
+    margin-left: 0;
+    border-radius: $default-border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn:last-child {
+    border-radius: $default-border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }

@@ -10,7 +10,7 @@ import BtnGroup from './btngroup';
 const UI = ReactUI({
   styles,
   components: {
-    BtnGroup: BtnGroup(styles.btngroup),
+    BtnGroup: BtnGroup(styles.button),
   },
 });
 
