@@ -10,8 +10,6 @@ $brand-info:     #5bc0de;
 .navbar {
   position: relative;
   box-sizing: border-box;
-  padding: 0 1.5rem;
-  margin-bottom: 5rem;
 
   &:before,
   &:after {
@@ -24,15 +22,6 @@ $brand-info:     #5bc0de;
   }
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background: $brand-white;
-  box-shadow: .2rem .2rem .6rem 0 rgba(0, 0, 0, .15);
-}
-
 .left {
   float: left;
 }
@@ -41,11 +30,15 @@ $brand-info:     #5bc0de;
   float: right;
 }
 
-.link {
+.item {
   display: inline-block;
   padding: 1rem 1.5rem;
   color: $brand-black;
   line-height: 1;
+}
+
+.link {
+  composes: item;
   text-decoration: none;
   cursor: pointer;
   transition: all .3s;
@@ -60,29 +53,14 @@ $brand-info:     #5bc0de;
 }
 
 .static {
-  display: inline-block;
-  margin-top: 0;
-  margin-left: 1.5rem;
-  color: $brand-black;
-  line-height: 1;
+  composes: item;
+  margin: 0;
 }
 
-.primary {
-  color: $brand-primary;
-}
-
-.danger {
-  color: $brand-danger;
-}
-
-.warning {
-  color: $brand-warning;
-}
-
-.success {
-  color: $brand-success;
-}
-
-.info {
-  color: $brand-info;
+.brand {
+  composes: item;
+  padding-left: 0;
+  margin-right: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 }

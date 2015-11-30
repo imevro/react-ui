@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 import cn from 'classnames';
 
 export default ( styles = {} ) => (props) => {
   return (
-    <div className={cn(styles.left, styles.className)}>
+    <Link {...props} className={cn(styles.brand, props.className)} to={props.to}>
       {props.children}
-    </div>
+    </Link>
   );
 };

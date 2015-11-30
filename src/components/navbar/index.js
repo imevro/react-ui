@@ -1,7 +1,7 @@
 import Container from './navbar';
-import Left from './left';
-import Right from './right';
+import Menu from './menu';
 import Link from './link';
 import Static from './static';
+import Brand from './brand';
 
-export default { Container, Left, Right, Link, Static };
+export default { Container, Menu, Link, Static, Brand };

@@ -51,8 +51,7 @@ export default function(props = {}) {
 
     Navbar: {
       Container: Navbar.Container(styles.navbar),
-      Left: Navbar.Left(styles.navbar),
-      Right: Navbar.Right(styles.navbar),
+      Menu: Navbar.Menu(styles.navbar),
       Link: Navbar.Link(styles.navbar),
       Static: Navbar.Static(styles.navbar),
     },
