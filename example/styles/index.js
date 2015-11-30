@@ -1,5 +1,5 @@
-import media from './media';
+import pager from './pager';
 
 export default {
-  media,
+  pager,
 };

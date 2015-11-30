@@ -9,6 +9,7 @@ import Image from './components/image';
 import Table from './components/table';
 import Form from './components/form';
 import Media from './components/media';
+import Pager from './components/pager';
 
 export default function(props = {}) {
   const { styles = {}, components = {} } = props;
@@ -22,6 +23,7 @@ export default function(props = {}) {
     Badge: Badge(styles.badge),
     Image: Image(styles.image),
     Media: Media(styles.media),
+    Pager: Pager(styles.pager),
 
     Table: {
       Container: Table.Container(styles.table),
