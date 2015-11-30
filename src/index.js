@@ -54,6 +54,7 @@ export default function(props = {}) {
       Menu: Navbar.Menu(styles.navbar),
       Link: Navbar.Link(styles.navbar),
       Static: Navbar.Static(styles.navbar),
+      Brand: Navbar.Brand(styles.navbar),
     },
 
     ...components,
