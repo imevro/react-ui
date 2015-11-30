@@ -4,13 +4,21 @@ import ReactUI from 'react-ui';
 import styles from 'styles';
 
 // Custom components, override supported!
-import Media from './media';
+import Navbar from './navbar';
+import Left from './left';
+import Right from './right';
+import Link from './link';
+import Static from './static';
 
 // Init
 const UI = ReactUI({
   styles,
   components: {
-    Media: Media(styles.media),
+    Navbar: Navbar(styles.navbar),
+    Left: Left(styles.navbar),
+    Right: Right(styles.navbar),
+    Link: Link(styles.navbar),
+    Static: Static(styles.navbar),
   },
 });
 

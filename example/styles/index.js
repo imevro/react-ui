@@ -1,5 +1,5 @@
-import media from './media';
+import navbar from './navbar';
 
 export default {
-  media,
+  navbar,
 };

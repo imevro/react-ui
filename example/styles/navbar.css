@@ -1,0 +1,88 @@
+$brand-white:    #ffffff;
+$brand-default:  #eeeeee;
+$brand-black:    #314248;
+$brand-primary:  #03a9f4;
+$brand-success:  #8BC34A;
+$brand-danger:   #F44336;
+$brand-warning:  #FF9800;
+$brand-info:     #5bc0de;
+
+.navbar {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  margin-bottom: 5rem;
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: $brand-white;
+  box-shadow: .2rem .2rem .6rem 0 rgba(0, 0, 0, .15);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.link {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: $brand-black;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand-white;
+    text-decoration: none;
+    background: $brand-primary;
+  }
+}
+
+.static {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 1.5rem;
+  color: $brand-black;
+  line-height: 1;
+}
+
+.primary {
+  color: $brand-primary;
+}
+
+.danger {
+  color: $brand-danger;
+}
+
+.warning {
+  color: $brand-warning;
+}
+
+.success {
+  color: $brand-success;
+}
+
+.info {
+  color: $brand-info;
+}
