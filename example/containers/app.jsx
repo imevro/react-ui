@@ -3,9 +3,9 @@ import UI from 'components/ui';
 
 export default () => {
   return (
-    <UI.Pager current={3}
-    total={10}
-    visiblePages={4}
+    <UI.Pager current={0}
+    total={20}
+    visiblePages={5}
     // onPageChanged={this.handlePageChanged}
     titles={{
       first: `First`,

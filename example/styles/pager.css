@@ -22,6 +22,7 @@ $brand-darker-grey: #ccc;
   &.active {
     color: $brand-white;
     background-color: $brand-primary;
+    outline: none;
   }
 
   &.active {
@@ -32,6 +33,13 @@ $brand-darker-grey: #ccc;
   }
 
   &.disabled {
-    color: color($brand-darker-grey blackness(10%));
+    color: $brand-darker-grey;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      color: $brand-darker-grey;
+      background: transparent;
+    }
   }
 }
