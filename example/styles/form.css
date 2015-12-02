@@ -1,0 +1,330 @@
+$brand-white:    #ffffff;
+$brand-default:  #eeeeee;
+$brand-black:    #314248;
+$brand-primary:  #03a9f4;
+$brand-success:  #8BC34A;
+$brand-danger:   #F44336;
+$brand-warning:  #FF9800;
+$brand-info:     #5bc0de;
+
+
+$brand-lighter-grey: #f0f0f0;
+$brand-light-grey: #f5f5f5;
+
+$brand-grey: #d7d7d7;
+
+$brand-dark-red:  #e42a2c;
+$brand-dark-blue: #0696d6;
+$brand-dark-grey: #d6d8de;
+
+$brand-darker-grey: #ccc;
+
+/* variables */
+$border-radius: .4rem;
+
+$padding-input-xs: .5rem 1rem;
+$padding-input-sm: .6rem 1.2rem;
+$padding-input-lg: 1rem 1.6rem;
+
+$padding-xs: .5rem .7rem 0;
+$padding-sm: .6rem .7rem 0;
+$padding-lg: 1rem .7rem 0;
+
+$select-icon-xs: 1rem;
+$select-icon-sm: 1.2rem;
+$select-icon-lg: 1.6rem;
+
+/* mixin */
+@mixin size($input, $label, $select-icon) {
+  .formControl {
+    padding: $input;
+  }
+
+  .selectWrapper:before {
+    right: $select-icon;
+  }
+
+  .label,
+  .static {
+    padding: $label;
+  }
+}
+
+@mixin validation($text-color, $border-color) {
+  .label,
+  .static,
+  .radio,
+  .checkbox {
+    color: $text-color;
+  }
+
+  .formControl {
+    border-color: $border-color;
+  }
+}
+
+/* */
+
+.form {
+  margin: 0;
+  display: block;
+}
+
+.group {
+  display: block;
+  margin-bottom: 1.5rem;
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  &.xs {
+    @include size($padding-input-xs, $padding-xs, $select-icon-xs);
+  }
+
+  &.sm {
+    @include size($padding-input-sm, $padding-sm, $select-icon-sm);
+  }
+
+  &.lg {
+    @include size($padding-input-lg, $padding-lg, $select-icon-lg);
+  }
+}
+
+.horizontal {
+  .label {
+    text-align: right;
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.label {
+  display: inline-block;
+  max-width: 100%;
+  padding: $padding-sm;
+  margin-bottom: 5px;
+  margin-right: .5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.42857143;
+}
+
+.formControl {
+  display: block;
+  box-sizing: border-box;
+  height: auto;
+  padding: .6rem 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.42857143;
+  color: $brand-black;
+  background-color: $brand-white;
+  background-image: none;
+  border: 1px solid $brand-grey;
+  border-radius: $border-radius;
+  transition: border-color ease-in-out .15s,
+              box-shadow ease-in-out .15s;
+
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    outline: 0;
+  }
+}
+
+.inputWrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.append {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 100%;
+  margin-left: 1rem;
+  line-height: 1.42857143;
+  transform: translateY(-50%);
+}
+
+.prepend {
+  composes: append;
+  left: auto;
+  right: 100%;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+
+/* checkbox && radio */
+
+.checkbox,
+.radio {
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkboxLabel,
+.radioLabel {
+  min-height: 2rem; /* $line-height-computed */
+  padding-left: 2rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.checkboxControl,
+.radioControl {
+  position: absolute;
+  margin-left: -2rem;
+  margin-top: .4rem;
+}
+
+/* ct */
+
+.select {
+  appearance: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding-right: 3rem !important;
+}
+
+.selectWrapper {
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 1.4rem;
+    height: .7rem;
+    margin-top: -.3rem;
+    background-color: transparent;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSI4cHgiIHZpZXdCb3g9IjAgMCAxNCA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4gICAgICAgIDx0aXRsZT5Ecm9wZG93biBDb3B5IDM8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc2tldGNoOnR5cGU9Ik1TUGFnZSI+ICAgICAgICA8ZyBpZD0iU3RhZmYtKEluZm9ybWF0aW9uKSIgc2tldGNoOnR5cGU9Ik1TQXJ0Ym9hcmRHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM1Ny4wMDAwMDAsIC00NDYuMDAwMDAwKSIgZmlsbD0iIzc1NzU3NSI+ICAgICAgICAgICAgPHBhdGggZD0iTTM2OS41MDUyNDYsNDQ2LjE3MDYzNSBMMzY0LjAwMDA1NSw0NTEuNjc2MTE4IEwzNTguNDk0ODYzLDQ0Ni4xNzA2MzUgQzM1OC4yNjczNDksNDQ1Ljk0MzEyMiAzNTcuODk4NTUsNDQ1Ljk0MzEyMiAzNTcuNjcwNzQ1LDQ0Ni4xNzA2MzUgQzM1Ny40NDI5NCw0NDYuMzk4MTQ5IDM1Ny40NDMyMzEsNDQ2Ljc2Njk0OSAzNTcuNjcwNzQ1LDQ0Ni45OTQ0NjIgTDM2My41ODc4NSw0NTIuOTExNTY4IEMzNjMuNzAxNzUyLDQ1My4wMjU3NjEgMzYzLjg1MDkwMyw0NTMuMDgyNTY3IDM2NC4wMDAwNTUsNDUzLjA4MjU2NyBDMzY0LjE0OTIwNiw0NTMuMDgyNTY3IDM2NC4yOTgzNTcsNDUzLjAyNTc2MSAzNjQuNDEyMjU5LDQ1Mi45MTE4NTkgTDM3MC4zMjkzNjUsNDQ2Ljk5NDc1NCBDMzcwLjU1Njg3OCw0NDYuNzY3MjQgMzcwLjU1Njg3OCw0NDYuMzk4NDQgMzcwLjMyOTM2NSw0NDYuMTcwOTI3IEMzNzAuMTAxNTYsNDQ1Ljk0MzEyMiAzNjkuNzMyNzYsNDQ1Ljk0MzEyMiAzNjkuNTA1MjQ2LDQ0Ni4xNzA2MzUgTDM2OS41MDUyNDYsNDQ2LjE3MDYzNSBaIiBpZD0iRHJvcGRvd24tQ29weS0zIiBza2V0Y2g6dHlwZT0iTVNTaGFwZUdyb3VwIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=) no-repeat;
+  }
+}
+
+.selectPlaceholder {
+  display: none;
+}
+
+.ranged {
+  display: inline-block;
+
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:last-child {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+
+/* kind */
+
+.form-success {
+  @include validation($brand-success, $brand-success);
+}
+
+.form-warning {
+  @include validation($brand-warning, $brand-warning);
+}
+
+.form-error {
+  @include validation($brand-danger, $brand-danger);
+}
+
+.default {
+  &:focus,
+  &:active {
+    border-color: $brand-default;
+    outline: 0;
+  }
+}
+
+.primary {
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    outline: 0;
+  }
+}
+
+.info {
+  &:focus,
+  &:active {
+    border-color: $brand-info;
+    outline: 0;
+  }
+}
+
+.warning {
+  &:focus,
+  &:active {
+    border-color: $brand-warning;
+    outline: 0;
+  }
+}
+
+.success {
+  &:focus,
+  &:active {
+    border-color: $brand-success;
+    outline: 0;
+  }
+}
+
+.danger {
+  &:focus,
+  &:active {
+    border-color: $brand-danger;
+    outline: 0;
+  }
+}
+
+/* static text */
+
+.static {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* display */
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.inline {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
