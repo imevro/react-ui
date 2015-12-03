@@ -1,6 +1,7 @@
 import Alert from './components/alert';
 import Panel from './components/panel';
 import Button from './components/button';
+import BtnGroup from './components/btngroup';
 import Loading from './components/loading';
 import Label from './components/label';
 import Badge from './components/badge';
@@ -10,6 +11,7 @@ import Table from './components/table';
 import Form from './components/form';
 import Media from './components/media';
 import Pager from './components/pager';
+import Navbar from './components/navbar';
 
 export default function(props = {}) {
   const { styles = {}, components = {} } = props;
@@ -18,6 +20,7 @@ export default function(props = {}) {
     Alert: Alert(styles.alert),
     Panel: Panel(styles.panel),
     Button: Button(styles.button),
+    BtnGroup: BtnGroup(styles.button),
     Loading: Loading(styles.loading),
     Label: Label(styles.label),
     Badge: Badge(styles.badge),
@@ -48,6 +51,14 @@ export default function(props = {}) {
       Container: Grid.Container(styles.grid),
       Row: Grid.Row(styles.grid),
       Col: Grid.Col(styles.grid),
+    },
+
+    Navbar: {
+      Container: Navbar.Container(styles.navbar),
+      Menu: Navbar.Menu(styles.navbar),
+      Link: Navbar.Link(styles.navbar),
+      Static: Navbar.Static(styles.navbar),
+      Brand: Navbar.Brand(styles.navbar),
     },
 
     ...components,

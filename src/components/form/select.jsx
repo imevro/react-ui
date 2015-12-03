@@ -16,8 +16,9 @@ export default (styles = {}) => props => {
     <div className={cn(styles.selectWrapper, block)}>
       <select {...props} defaultValue="null" className={cn(styles.formControl, styles.select, className, props.className)}>
         <option value="null" className={styles.selectPlaceholder}>{props.placeholder}</option>
-        {props.options.map(option =>
-          <option value={option.value}>{option.label}</option>
+
+        {props.options.map((option, index) =>
+          <option value={option.value} key={index}>{option.label}</option>
         )}
       </select>
     </div>

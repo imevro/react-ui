@@ -1,5 +1,5 @@
-import pager from './pager';
+import button from './button';
 
 export default {
-  pager,
+  button,
 };
