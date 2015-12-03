@@ -154,12 +154,15 @@ $select-icon-lg: 1.6rem;
 .append {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 0;
   bottom: 0;
   left: 100%;
   margin-left: 1rem;
-  line-height: 1.42857143;
-  transform: translateY(-50%);
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .prepend {

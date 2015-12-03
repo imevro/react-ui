@@ -24,6 +24,10 @@ const config = {
         test: /\.css/,
         loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       },
+      {
+        test: /\/[^\/]+\/assets\/[^\.]+\.svg/,
+        loader: 'svg-sprite!svgo?useConfig=svgoIcons',
+      }
     ],
   },
   resolve: {
@@ -53,6 +57,15 @@ const config = {
     require('postcss-nested'),
     require('autoprefixer')({ browsers: ['last 2 versions'] }),
   ],
+  svgoIcons: {
+    plugins: [
+      {
+        removeAttrs: {
+          attrs: [ 'fill', 'fill-rule' ]
+        }
+      }
+    ]
+  },
   devtool: 'cheap-module-eval-source-map',
 };
 

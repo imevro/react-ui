@@ -4,13 +4,13 @@ import ReactUI from 'react-ui';
 import styles from 'styles';
 
 // Custom components, override supported!
-// import Media from './media';
+import Icon from './icon';
 
 // Init
 const UI = ReactUI({
   styles,
   components: {
-    // Media: Media(styles.media),
+    Icon: Icon(styles.icon),
   },
 });
 

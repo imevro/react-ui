@@ -13,8 +13,9 @@ export default (styles = {}) => props => {
 
   return (
     <div className={cn(styles.inputWrapper, block)}>
+
       {props.prepend &&
-        <div className={styles.prepend}>
+        <div className={styles.prepend} style={{ width: `${props.prependWidth}` }}>
           {props.prepend}
         </div>
       }
@@ -22,7 +23,7 @@ export default (styles = {}) => props => {
       <input {...props} className={cn(styles.formControl, className, props.className)} />
 
       {props.append &&
-        <div className={styles.append}>
+        <div className={styles.append} style={{ width: `${props.appendWidth}` }}>
           {props.append}
         </div>
       }
