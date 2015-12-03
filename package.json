@@ -1,6 +1,6 @@
 {
   "name": "@react-ui/core",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -13,7 +13,7 @@
   "scripts": {
     "clean": "rimraf lib",
     "start": "NODE_ENV=development node webpack.server.development.js",
-    "build": "NODE_ENV=production babel src --out-dir lib",
+    "build": "NODE_ENV=production $(npm bin)/babel src --out-dir lib",
     "lint": "eslint --ext .jsx --ext .js src example",
     "test": "npm run lint",
     "precommit": "npm test",
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@dtrussia/eslint-config-dtrussia": "^1.0.3",
     "autoprefixer": "^6.1.2",
+    "babel-cli": "6.2.0",
     "babel-core": "6.2.1",
     "babel-eslint": "^5.0.0-beta4",
     "babel-loader": "6.2.0",
