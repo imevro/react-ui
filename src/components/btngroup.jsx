@@ -3,8 +3,8 @@ import cn from 'classnames';
 
 export default (styles = {}) => props => {
   return (
-    <nav className={cn(styles.navbar, styles.className)}>
+    <div {...props} className={cn(styles.btnGroup, props.className)}>
       {props.children}
-    </nav>
+    </div>
   );
 };

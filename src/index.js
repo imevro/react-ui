@@ -1,6 +1,7 @@
 import Alert from './components/alert';
 import Panel from './components/panel';
 import Button from './components/button';
+import BtnGroup from './components/btngroup';
 import Loading from './components/loading';
 import Label from './components/label';
 import Badge from './components/badge';
@@ -18,6 +19,7 @@ export default function(props = {}) {
     Alert: Alert(styles.alert),
     Panel: Panel(styles.panel),
     Button: Button(styles.button),
+    BtnGroup: BtnGroup(styles.button),
     Loading: Loading(styles.loading),
     Label: Label(styles.label),
     Badge: Badge(styles.badge),

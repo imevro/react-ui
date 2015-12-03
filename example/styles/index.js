@@ -1,5 +1,5 @@
-import navbar from './navbar';
+import button from './button';
 
 export default {
-  navbar,
+  button,
 };
