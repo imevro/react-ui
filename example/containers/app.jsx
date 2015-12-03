@@ -1,14 +1,8 @@
 import React from 'react';
-import UI from 'components/ui';
+// import UI from 'components/ui';
 
 export default () => {
   return (
-    <UI.BtnGroup>
-      <UI.Button type="button" kind="success" size="sm">Click again</UI.Button>
-      <UI.Button type="button" kind="default" size="sm">One more</UI.Button>
-      <UI.Button type="button" size="sm">One more</UI.Button>
-      <UI.Button type="button" size="sm">One more</UI.Button>
-      <UI.Button type="button" size="sm">One more</UI.Button>
-    </UI.BtnGroup>
+    <div>example playground</div>
   );
 };
