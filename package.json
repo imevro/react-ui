@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/dtrussia/react-ui-core#readme",
   "devDependencies": {
+    "@dtrussia/eslint-config-dtrussia": "^1.0.3",
     "autoprefixer": "^6.1.2",
     "babel-core": "6.2.1",
     "babel-eslint": "^5.0.0-beta4",
