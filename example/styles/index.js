@@ -1,5 +1,5 @@
-import button from './button';
+import toastr from './toastr';
 
 export default {
-  button,
+  toastr,
 };

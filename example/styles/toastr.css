@@ -1,0 +1,58 @@
+$brand-white: #ffffff;
+$brand-black: #314248;
+$brand-success: rgba(139, 195, 74, .95);
+$brand-warning: rgba(255, 152, 0, .95);
+$brand-danger: rgba(244, 67, 54, .95);
+$brand-primary: rgba(3, 169, 244, .95);
+$brand-info: rgba(91, 192, 222, .95);
+
+.container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  color: $brand-black;
+  background-color: $brand-white;
+  padding: 2rem 2.5rem;
+}
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.body {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@mixin kind($color) {
+  color: $brand-white;
+  background-color: $color;
+  cursor: pointer;
+  opacity: .95;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.success {
+  @include kind($brand-success);
+}
+
+.danger {
+  @include kind($brand-danger);
+}
+
+.warning {
+  @include kind($brand-warning);
+}
+
+.primary {
+  @include kind($brand-primary);
+}
+
+.info {
+  @include kind($brand-info);
+}
