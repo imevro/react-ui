@@ -13,7 +13,7 @@ npm install --save react-ui-core
 * [Button](#button)
 * [BtnGroup](#btngroup)
 * [Image](#image)
-* Label
+* [Label](#label)
 * Loading
 * Media
 * Panel
@@ -75,6 +75,7 @@ Add any of the below mentioned kind modifier to change the appearance of the bad
 - warning
 - success
 - info
+- default
 
 ### Button
 
@@ -132,6 +133,11 @@ BtnGroup is simple as possible
 // or
 
 <UI.Image src="//" responsive kind="rounded" width="128" height="128" />
+
+// or
+
+<UI.Image src="//" responsive width="128" height="128" />
+
 ```
 
 Add any of the below mentioned modifier to change the appearance of the image:
@@ -140,3 +146,20 @@ Add any of the below mentioned modifier to change the appearance of the image:
   - rounded
   - bordered
 * responsive (full width of the container)
+
+### Label
+
+```js
+<UI.Label kind="success">
+  Label text here
+</UI.Label>
+```
+
+Add any of the below mentioned kind modifier to change the appearance of the label:
+- primary
+- success
+- danger
+- warning
+- success
+- info
+- default
