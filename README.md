@@ -37,8 +37,8 @@ npm install --save react-ui-core
   - Link
   - Brand
   - Static
-* Pager
-* Table
+* [Pager](#pager)
+* [Table](#table)
   - Container
   - Row
   - Heading
@@ -471,3 +471,39 @@ Add fixed modifier to change the appearance of the navbar container:
 Add belwo modifier to change the appearance of the navbar menu:
 * left
 * right
+
+---------------------------------------
+
+### Pager
+```js
+<Pager
+   current={3}
+   total={20}
+   visiblePages={5}
+   onPageChanged={this.handlePageChanged}
+   titles={{
+     first:   "First",
+     prev:  "Prev",
+     prevSet: "<<<",
+     nextSet: ">>>",
+     next:  "Next",
+     last:  "Last"
+   }} />
+```
+
+Pager:
+* current - current page
+* total - current pages (not items)
+* visiblePages - visible pages
+* onPageChanged - action
+* titles
+  - first - first page
+  - prev - previous page
+  - prevSet - previous set of pages
+  - nextSet - next set of pages
+  - next - next page
+  - last - last page
+
+---------------------------------------
+
+### Table
