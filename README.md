@@ -17,6 +17,10 @@ npm install --save react-ui-core
 * [Loading](#loading)
 * [Media](#media)
 * [Panel](#panel)
+* [Grid (12 column)](#grid)
+  - Container
+  - Row
+  - Col
 * [Form](#form)
   - Container
   - Group
@@ -27,10 +31,6 @@ npm install --save react-ui-core
   - Label
   - Static
   - Textarea
-* [Grid (12 column)](#grid)
-  - Container
-  - Row
-  - Col
 * [Navbar](#navbar)
   - Container
   - Menu
@@ -468,6 +468,6 @@ Add any of the below mentioned modifier to change the appearance of the form tex
 Add fixed modifier to change the appearance of the navbar container:
 * fixed
 
-Add fixed modifier to change the appearance of the navbar menu:
+Add belwo modifier to change the appearance of the navbar menu:
 * left
 * right
