@@ -1,4 +1,4 @@
-#React-UI
+# React-UI
 
 #### Collection of simple react components
 
@@ -8,7 +8,7 @@ npm install --save react-ui-core
 ```
 
 ## Components
-* Alert
+* [Alert](#alert)
 * Badge
 * BtnGroup
 * Button
@@ -47,3 +47,13 @@ npm install --save react-ui-core
 ## Usage
 
 ### Alert
+
+```js
+<UI.Alert message="Alert title here">
+  simple text here
+</UI.Alert>
+
+or
+
+<UI.Alert message="Alert title here" />
+```
