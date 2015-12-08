@@ -222,7 +222,7 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 
 ### Form
 
-By default Lable, Input, Static: inline-block.
+**Example for Form.Container, Form.Group, Form.Input**
 
 ```js
 <UI.Grid.Row>
@@ -273,6 +273,8 @@ By default Lable, Input, Static: inline-block.
 
 ```
 
+#### Form.Group
+
 Add any of the below mentioned modifier to change the appearance of the form group:
 * size (modify padding for label, formControl and static)
   - xs
@@ -284,5 +286,8 @@ Add any of the below mentioned modifier to change the appearance of the form gro
   - warning
 * horizontal (notice, that label, static and input modify to display: block)
 
+#### Form.Label
+
 Add block modifier to change the appearance of the label:
+
 * block (modify label to display block and have 100% width of the container)
