@@ -17,7 +17,7 @@ npm install --save react-ui-core
 * [Loading](#loading)
 * [Media](#media)
 * [Panel](#panel)
-* Form
+* [Form](#form)
   - Container
   - Group
   - Checkbox
@@ -219,3 +219,42 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 * size
   - xs
   - sm
+
+### Form
+
+By default Lable, Input, Static: inline-block.
+
+```js
+<UI.Grid.Row>
+  <UI.Form.Container>
+    <UI.Form.Group horizontal size="sm" kind="success">
+
+      <UI.Grid.Col xs="4">
+        <UI.Form.Label>
+          Email
+        </UI.Form.Label>
+      </UI.Grid.Col>
+
+      <UI.Grid.Col xs="4">
+        <UI.Form.Input placeholder="Email" />
+      </UI.Grid.Col>
+
+      <UI.Grid.Col xs="4">
+        <UI.Form.Static>text</UI.Form.Static>
+      </UI.Grid.Col>
+
+    </UI.Form.Group>
+  </UI.Form.Container>
+</UI.Grid.Row>
+```
+
+Add any of the below mentioned modifier to change the appearance of the form group:
+* size (modify padding for label, formControl and static)
+  - xs
+  - sm
+  - lg
+* kind
+  - success
+  - error
+  - warning
+* horizontal (notice, that label, static and input modify to display: block)
