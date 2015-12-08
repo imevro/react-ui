@@ -10,9 +10,9 @@ export default (styles = {}) => props => {
     [styles.bordered]: !!props.bordered,
   };
 
-  if (responsive) {
+  if (props.responsive) {
     return (
-      <div className={styles.responsive}>
+      <div className={cn(responsive)}>
         <table {...props} className={cn(styles.table, className, props.className)}>
           <tbody>
             {props.children}
