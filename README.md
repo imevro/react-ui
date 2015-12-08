@@ -230,9 +230,7 @@ By default Lable, Input, Static: inline-block.
     <UI.Form.Group horizontal size="sm" kind="success">
 
       <UI.Grid.Col xs="4">
-        <UI.Form.Label>
-          Email
-        </UI.Form.Label>
+        <UI.Form.Label>Email</UI.Form.Label>
       </UI.Grid.Col>
 
       <UI.Grid.Col xs="4">
@@ -240,12 +238,39 @@ By default Lable, Input, Static: inline-block.
       </UI.Grid.Col>
 
       <UI.Grid.Col xs="4">
-        <UI.Form.Static>text</UI.Form.Static>
+        <UI.Form.Static>Text</UI.Form.Static>
       </UI.Grid.Col>
 
     </UI.Form.Group>
   </UI.Form.Container>
 </UI.Grid.Row>
+
+// or
+
+<UI.Form.Container>
+  <UI.Form.Group>
+    <UI.Form.Label>Name</UI.Form.Label>
+    <UI.Form.Input placeholder="Name" />
+  </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Label>Email</UI.Form.Label>
+    <UI.Form.Input placeholder="Email" />
+  </UI.Form.Group>
+</UI.Form.Container>
+
+// or
+
+<UI.Form.Container>
+  <UI.Form.Group>
+    <UI.Form.Label block>Name</UI.Form.Label>
+    <UI.Form.Input block placeholder="Name" />
+  </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Label>Email</UI.Form.Label>
+    <UI.Form.Input placeholder="Email" />
+  </UI.Form.Group>
+</UI.Form.Container>
+
 ```
 
 Add any of the below mentioned modifier to change the appearance of the form group:
@@ -258,3 +283,6 @@ Add any of the below mentioned modifier to change the appearance of the form gro
   - error
   - warning
 * horizontal (notice, that label, static and input modify to display: block)
+
+Add block modifier to change the appearance of the label:
+* block (modify label to display block and have 100% width of the container)
