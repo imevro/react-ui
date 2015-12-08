@@ -236,6 +236,37 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 
 ---------------------------------------
 
+### Grid
+
+```js
+<UI.Grid.Container>
+  <UI.Grid.Row>
+    <UI.Grid.Col xs="12" sm="6" md="4">
+      1
+    </UI.Grid.Col>
+    <UI.Grid.Col xs="12" sm="6" md="4">
+      2
+    </UI.Grid.Col>
+    <UI.Grid.Col xs="12" sm="6" md="4">
+      3
+    </UI.Grid.Col>
+  </UI.Grid.Row>
+  <UI.Grid.Row>
+    <UI.Grid.Col xs="6" xsOffset="3">
+      2
+    </UI.Grid.Col>
+  </UI.Grid.Row>
+</UI.Grid.Container>
+```
+
+Add any of the below mentioned modifier to change number of the column:
+* xs, sm, md, lg
+  - from 1 to 12
+* xsOffset, smOffset, mdOffset, lgOffset
+  - from 1 to 12
+
+---------------------------------------
+
 ### Form
 
 ```js
@@ -398,3 +429,5 @@ Add any of the below mentioned modifier to change the appearance of the form tex
   - warning
   - info
 * block
+
+---------------------------------------
