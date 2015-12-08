@@ -491,7 +491,7 @@ Add belwo modifier to change the appearance of the navbar menu:
    }} />
 ```
 
-Pager:
+Pager explain:
 * current - current page
 * total - current pages (not items)
 * visiblePages - visible pages
@@ -507,3 +507,33 @@ Pager:
 ---------------------------------------
 
 ### Table
+
+```js
+<UI.Table.Container responsive bordered>
+  <UI.Table.Row>
+    <UI.Table.Heading>Heading 1</UI.Table.Heading>
+  </UI.Table.Row>
+  <UI.Table.Row>
+    <UI.Table.Cell>Cell 1</UI.Table.Cell>
+  </UI.Table.Row>
+</UI.Table.Container>
+
+// or
+
+<UI.Table.Container>
+  <UI.Table.Row>
+    <UI.Table.Heading>Heading 1</UI.Table.Heading>
+  </UI.Table.Row>
+  <UI.Table.Row>
+    <UI.Table.Cell bordered>Cell 1</UI.Table.Cell>
+  </UI.Table.Row>
+</UI.Table.Container>
+
+```
+
+Add below modifier to change the appearance of the table container:
+* responsive (by default it's not)
+* bordered
+
+Add bordered modifier to change the appearance of the table head and table cell:
+* bordered
