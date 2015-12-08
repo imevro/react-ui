@@ -311,6 +311,9 @@ Add any of the below mentioned size modifier to change the appearance of the pan
     <UI.Form.Radio name="radio">Second</UI.Form.Radio>
     <UI.Form.Radio name="radio">Third</UI.Form.Radio>
   </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Textarea kind="success" block rows="6" defaultValue="Don't forget to add row attribute" />
+  </UI.Form.Group>
 </UI.Form.Container>
 ```
 
@@ -384,3 +387,14 @@ Add inline modifier to change the appearance of the form checkbox:
 Add inline modifier to change the appearance of the form radio:
 * inline
 * name (notice, that radio need to have the same name attribute for all inputs)
+
+#### Textarea
+
+Add any of the below mentioned modifier to change the appearance of the form textarea:
+* kind (modify border color)
+  - primary (default)
+  - success
+  - danger
+  - warning
+  - info
+* block
