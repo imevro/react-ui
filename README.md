@@ -365,4 +365,4 @@ Add any of the below mentioned modifier to change the appearance of the form inp
 * block
 * ranged
 * options
-  - array of a object (each object modify to <option></option>)
+  - array of a object (each object modify to select option)
