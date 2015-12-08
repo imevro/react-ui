@@ -15,8 +15,8 @@ npm install --save react-ui-core
 * [Image](#image)
 * [Label](#label)
 * [Loading](#loading)
-* Media
-* Panel
+* [Media](#media)
+* [Panel](#panel)
 * Form
   - Container
   - Group
@@ -171,8 +171,51 @@ Add any of the below mentioned kind modifier to change the appearance of the lab
 ```js
 
 this.state = {
-  loading: false, // by default, you need to set it to true, to see loading
+  loading: false, // use state to set loading
 };
 
 <UI.Loading />
 ```
+
+### Media
+
+Media displays a media object (images) to the left or right of a content block.
+
+```js
+<UI.Media
+  left={<UI.Image src="//" width="64" height="64" />}
+  body={<div>your component here</div>}
+/>
+
+// or
+
+<UI.Media
+  left={<UI.Image src="//" width="64" height="64" />}
+  body={<div>your component here</div>}
+  right={<UI.Image src="//" width="64" height="64" />}
+/>
+
+// or
+
+<UI.Media
+  body={<div>your component here</div>}
+  right={<UI.Image src="//" width="64" height="64" />}
+/>
+
+```
+
+### Panel
+
+By default, Panel apply some basic background-color and padding to contain some content.
+This component use media-queries
+
+```js
+<UI.Panel size="sm">
+  content here
+</UI.Panel>
+```
+
+Add any of the below mentioned size modifier to change the appearance of the panel:
+* size
+  - xs
+  - sm
