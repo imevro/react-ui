@@ -31,7 +31,7 @@ npm install --save react-ui-core
   - Container
   - Row
   - Col
-* Navbar
+* [Navbar](#navbar)
   - Container
   - Menu
   - Link
@@ -432,3 +432,42 @@ Add any of the below mentioned modifier to change the appearance of the form tex
 * block
 
 ---------------------------------------
+
+### Navbar
+
+```js
+<UI.Navbar.Container>
+  <UI.Navbar.Menu left>
+    <UI.Navbar.Brand>Brand</UI.Navbar.Brand>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Static>Static</UI.Navbar.Static>
+  </UI.Navbar.Menu>
+  <UI.Navbar.Menu right>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+  </UI.Navbar.Menu>
+</UI.Navbar.Container>
+
+// or
+
+<UI.Navbar.Container fixed>
+  <UI.Navbar.Menu left>
+    <UI.Navbar.Brand>Brand</UI.Navbar.Brand>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Static>Static</UI.Navbar.Static>
+  </UI.Navbar.Menu>
+  <UI.Navbar.Menu right>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+    <UI.Navbar.Link>Link</UI.Navbar.Link>
+  </UI.Navbar.Menu>
+</UI.Navbar.Container>
+```
+
+Add fixed modifier to change the appearance of the navbar container:
+* fixed
+
+Add fixed modifier to change the appearance of the navbar menu:
+* left
+* right
