@@ -238,8 +238,6 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 
 ### Form
 
-**Example for Form.Container, Form.Group, Form.Input, Form.Select**
-
 ```js
 <UI.Grid.Row>
   <UI.Form.Container>
@@ -303,8 +301,17 @@ Add any of the below mentioned size modifier to change the appearance of the pan
     <UI.Form.Label block>Email</UI.Form.Label>
     <UI.Form.Input block kind="warning" placeholder="Email" />
   </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Checkbox>First</UI.Form.Checkbox>
+    <UI.Form.Checkbox>Second</UI.Form.Checkbox>
+    <UI.Form.Checkbox>Third</UI.Form.Checkbox>
+  </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Radio name="radio">First</UI.Form.Radio>
+    <UI.Form.Radio name="radio">Second</UI.Form.Radio>
+    <UI.Form.Radio name="radio">Third</UI.Form.Radio>
+  </UI.Form.Group>
 </UI.Form.Container>
-
 ```
 
 #### Group
@@ -366,3 +373,14 @@ Add any of the below mentioned modifier to change the appearance of the form inp
 * ranged
 * options
   - array of a object (each object modify to select option)
+
+#### Checkbox
+
+Add inline modifier to change the appearance of the form checkbox:
+* inline
+
+#### Radio
+
+Add inline modifier to change the appearance of the form radio:
+* inline
+* name (notice, that radio need to have the same name attribute for all inputs)
