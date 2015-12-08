@@ -258,7 +258,7 @@ Add any of the below mentioned size modifier to change the appearance of the pan
   </UI.Grid.Row>
 </UI.Grid.Container>
 ```
-Container by default have fixed width, add <UI.Grid.Container fluid> to be 100% width.
+Container by default have fixed width, add \<UI.Grid.Container fluid> to be 100% width.
 
 Add any of the below mentioned modifier to change number of the column:
 * xs, sm, md, lg
