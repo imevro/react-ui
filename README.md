@@ -238,7 +238,7 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 
 ### Form
 
-**Example for Form.Container, Form.Group, Form.Input**
+**Example for Form.Container, Form.Group, Form.Input, Form.Select**
 
 ```js
 <UI.Grid.Row>
@@ -272,6 +272,24 @@ Add any of the below mentioned size modifier to change the appearance of the pan
     <UI.Form.Label>Email</UI.Form.Label>
     <UI.Form.Input placeholder="Email" />
   </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Label>Select</UI.Form.Label>
+    <UI.Form.Select kind="primary" placeholder="Placeholder" options={[
+      { value: `one`, label: `one` },
+      { value: `two`, label: `two` },
+    ]} />
+  </UI.Form.Group>
+  <UI.Form.Group>
+    <UI.Form.Label>Select</UI.Form.Label>
+    <UI.Form.Select kind="primary" ranged placeholder="Placeholder" options={[
+      { value: `one`, label: `one` },
+      { value: `two`, label: `two` },
+    ]} />
+    <UI.Form.Select kind="primary" ranged placeholder="Placeholder" options={[
+      { value: `one`, label: `one` },
+      { value: `two`, label: `two` },
+    ]} />
+  </UI.Form.Group>
 </UI.Form.Container>
 
 // or
@@ -289,7 +307,7 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 
 ```
 
-#### Form.Group
+#### Group
 
 Add any of the below mentioned modifier to change the appearance of the form group:
 * size (modify padding for label, formControl and static)
@@ -302,13 +320,13 @@ Add any of the below mentioned modifier to change the appearance of the form gro
   - warning
 * horizontal (notice, that label, static and input modify to display: block)
 
-#### Form.Label
+#### Label
 
 Add block modifier to change the appearance of the label:
 
 * block (modify label to display block and have 100% width of the container)
 
-#### Form.Input
+#### Input
 
 Add any of the below mentioned modifier to change the appearance of the form input:
 * kind (modify border color)
@@ -318,3 +336,31 @@ Add any of the below mentioned modifier to change the appearance of the form inp
   - warning
   - info
 * block
+
+
+#### Select
+
+```js
+<UI.Form.Select kind="primary" placeholder="Placeholder" options={[
+  { value: `one`, label: `one` },
+  { value: `two`, label: `two` },
+]} />
+
+// or
+
+<UI.Form.Select block kind="primary" placeholder="Placeholder" options={[
+  { value: `one`, label: `one` },
+  { value: `two`, label: `two` },
+  { value: `three`, label: `three` },
+]} />
+```
+
+Add any of the below mentioned modifier to change the appearance of the form input:
+* kind (modify border color)
+  - primary (default)
+  - success
+  - danger
+  - warning
+  - info
+* block
+* ranged
