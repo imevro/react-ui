@@ -279,11 +279,11 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 <UI.Form.Container>
   <UI.Form.Group>
     <UI.Form.Label block>Name</UI.Form.Label>
-    <UI.Form.Input block placeholder="Name" />
+    <UI.Form.Input block kind="warning" placeholder="Name" />
   </UI.Form.Group>
   <UI.Form.Group>
-    <UI.Form.Label>Email</UI.Form.Label>
-    <UI.Form.Input placeholder="Email" />
+    <UI.Form.Label block>Email</UI.Form.Label>
+    <UI.Form.Input block kind="warning" placeholder="Email" />
   </UI.Form.Group>
 </UI.Form.Container>
 
@@ -307,3 +307,14 @@ Add any of the below mentioned modifier to change the appearance of the form gro
 Add block modifier to change the appearance of the label:
 
 * block (modify label to display block and have 100% width of the container)
+
+#### Form.Input
+
+Add any of the below mentioned modifier to change the appearance of the form input:
+* kind (modify border color)
+  - primary (default)
+  - success
+  - danger
+  - warning
+  - info
+* block
