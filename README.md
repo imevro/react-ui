@@ -179,7 +179,7 @@ this.state = {
 
 ### Media
 
-Media displays a media object (images) to the left or right of a content block.
+Media displays a media object (images or any what you want) to the left or right of a content block.
 
 ```js
 <UI.Media
