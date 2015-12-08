@@ -62,6 +62,8 @@ Please remember, that we use rem units for all our component
 </UI.Alert>
 ```
 
+---------------------------------------
+
 ### Badge
 
 ```js
@@ -78,6 +80,8 @@ Add any of the below mentioned kind modifier to change the appearance of the bad
 - success
 - info
 - default
+
+---------------------------------------
 
 ### Button
 
@@ -115,6 +119,7 @@ Add any of the below mentioned modifier to change the appearance of the button:
   - lg
 * block (to full width of the container)
 
+---------------------------------------
 
 ### BtnGroup
 
@@ -126,6 +131,8 @@ BtnGroup is simple as possible
   <UI.Button type="button" kind="primary">button</UI.Button>
 </UI.BtnGroup>
 ```
+
+---------------------------------------
 
 ### Image
 
@@ -149,6 +156,8 @@ Add any of the below mentioned modifier to change the appearance of the image:
   - bordered
 * responsive (full width of the container)
 
+---------------------------------------
+
 ### Label
 
 ```js
@@ -166,16 +175,19 @@ Add any of the below mentioned kind modifier to change the appearance of the lab
 - info
 - default
 
+---------------------------------------
+
 ### Loading
 
 ```js
-
 this.state = {
   loading: false, // use state to set loading
 };
 
 <UI.Loading />
 ```
+
+---------------------------------------
 
 ### Media
 
@@ -204,6 +216,8 @@ Media displays a media object (images or any what you want) to the left or right
 
 ```
 
+---------------------------------------
+
 ### Panel
 
 By default, Panel apply some basic background-color and padding to contain some content.
@@ -219,6 +233,8 @@ Add any of the below mentioned size modifier to change the appearance of the pan
 * size
   - xs
   - sm
+
+---------------------------------------
 
 ### Form
 
