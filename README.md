@@ -12,7 +12,7 @@ npm install --save react-ui-core
 * [Badge](#badge)
 * [Button](#button)
 * [BtnGroup](#btngroup)
-* Image
+* [Image](#image)
 * Label
 * Loading
 * Media
@@ -115,6 +115,7 @@ Add any of the below mentioned modifier to change the appearance of the button:
 
 ### BtnGroup
 
+BtnGroup is simple as possible
 ```js
 <UI.BtnGroup>
   <UI.Button type="button" kind="primary">button</UI.Button>
@@ -122,3 +123,20 @@ Add any of the below mentioned modifier to change the appearance of the button:
   <UI.Button type="button" kind="primary">button</UI.Button>
 </UI.BtnGroup>
 ```
+
+### Image
+
+```js
+<UI.Image src="//" kind="circle" width="64" height="64" />
+
+// or
+
+<UI.Image src="//" responsive kind="rounded" width="128" height="128" />
+```
+
+Add any of the below mentioned modifier to change the appearance of the image:
+* kind
+  - circle (notice, for perfect circle you need to provide square image)
+  - rounded
+  - bordered
+* responsive (full width of the container)
