@@ -14,7 +14,7 @@ npm install --save react-ui-core
 * [BtnGroup](#btngroup)
 * [Image](#image)
 * [Label](#label)
-* Loading
+* [Loading](#loading)
 * Media
 * Panel
 * Form
@@ -45,6 +45,8 @@ npm install --save react-ui-core
   - Cell
 
 ## Usage
+
+Please remember, that we use rem units for all our component
 
 ### Alert
 
@@ -163,3 +165,14 @@ Add any of the below mentioned kind modifier to change the appearance of the lab
 - success
 - info
 - default
+
+### Loading
+
+```js
+
+this.state = {
+  loading: false, // by default, you need to set it to true, to see loading
+};
+
+<UI.Loading />
+```
