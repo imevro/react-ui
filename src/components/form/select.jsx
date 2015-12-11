@@ -7,7 +7,6 @@ export default (styles = {}) => props => {
   };
 
   const className = {
-    [styles[props.size]]: !!props.size,
     [styles[props.kind]]: !!props.kind,
     [styles.ranged]: !!props.ranged,
   };
