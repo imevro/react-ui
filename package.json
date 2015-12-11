@@ -1,6 +1,6 @@
 {
   "name": "@react-ui/core",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -61,6 +61,7 @@
     "postcss-sassy-mixins": "^1.0.0",
     "postcss-simple-vars": "^1.1.0",
     "react-dom": "^0.14.3",
+    "react-maskedinput": "3.0.0",
     "react-transform-hmr": "^1.0.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",

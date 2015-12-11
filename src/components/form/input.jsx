@@ -1,4 +1,5 @@
 import React from 'react';
+import MaskedInput from 'react';
 import cn from 'classnames';
 
 export default (styles = {}) => props => {
@@ -7,7 +8,6 @@ export default (styles = {}) => props => {
     [styles.block]: !!props.block,
   };
 
-  return (
-    <input {...props} className={cn(styles.formControl, className, props.className)} />
-  );
+  const input = props.mask ? <MaskedInput {...props} className={cn(styles.formControl, className, props.className)} /> : <input {...props} className={cn(styles.formControl, className, props.className)} />;
+  return input;
 };
