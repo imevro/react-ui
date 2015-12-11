@@ -1,5 +1,5 @@
 import React from 'react';
-import MaskedInput from 'react';
+import MaskedInput from 'react-maskedinput';
 import cn from 'classnames';
 
 export default (styles = {}) => props => {
