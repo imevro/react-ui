@@ -7,5 +7,6 @@ import Radio from './radio';
 import Textarea from './textarea';
 import Select from './select';
 import Static from './static';
+import Helper from './helper';
 
-export default { Container, Group, Input, Label, Checkbox, Radio, Textarea, Select, Static };
+export default { Container, Group, Input, Label, Checkbox, Radio, Textarea, Select, Static, Helper };
