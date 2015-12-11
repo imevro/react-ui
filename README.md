@@ -4,7 +4,7 @@
 
 ## Install
 ```sh
-npm install --save react-ui-core
+npm install --save @react-ui/core
 ```
 
 ## Components
