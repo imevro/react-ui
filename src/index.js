@@ -45,6 +45,7 @@ export default function(props = {}) {
       Radio: Form.Radio(styles.form),
       Select: Form.Select(styles.form),
       Static: Form.Static(styles.form),
+      Helper: Form.Helper(styles.form),
     },
 
     Grid: {
