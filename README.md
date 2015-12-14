@@ -47,7 +47,6 @@ npm install --save @react-ui/core
 ## Usage
 
 Please remember, that we use rem units for all our component.
-Grid system uses flexbox.
 
 ### Alert
 
