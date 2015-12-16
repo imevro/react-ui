@@ -46,7 +46,7 @@ npm install --save @react-ui/core
 
 ## Usage
 
-Please remember, that we use rem units for all our component
+Please remember, that we use rem units for all our component.
 
 ### Alert
 
@@ -251,11 +251,29 @@ Add any of the below mentioned size modifier to change the appearance of the pan
       3
     </UI.Grid.Col>
   </UI.Grid.Row>
+
   <UI.Grid.Row>
     <UI.Grid.Col xs="6" xsOffset="3">
-      2
+      1
     </UI.Grid.Col>
   </UI.Grid.Row>
+
+  <UI.Row xs="between">
+    <UI.Col xs="4">
+      1
+    </UI.Col>
+    <UI.Col xs="4">
+      2
+    </UI.Col>
+  </UI.Row>
+  <UI.Row xs="center bottom">
+    <UI.Col xs="4">
+      1
+    </UI.Col>
+    <UI.Col xs="2">
+      2
+    </UI.Col>
+  </UI.Row>
 </UI.Grid.Container>
 ```
 Container by default have fixed width, add \<UI.Grid.Container fluid> to be 100% width.
@@ -265,6 +283,12 @@ Add any of the below mentioned modifier to change number of the column:
   - from 1 to 12
 * xsOffset, smOffset, mdOffset, lgOffset
   - from 1 to 12
+
+Add any of the below mentioned modifier to row to change alignment of a column:
+* xs, sm, md, lg
+  - top, middle, bottom
+  - start, center, end
+  - around, between
 
 ---------------------------------------
 
