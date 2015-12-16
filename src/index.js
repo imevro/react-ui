@@ -41,8 +41,6 @@ export default function(props = {}) {
       Input: Form.Input(styles.form),
       Textarea: Form.Textarea(styles.form),
       Label: Form.Label(styles.form),
-      Checkbox: Form.Checkbox(styles.form),
-      Radio: Form.Radio(styles.form),
       Select: Form.Select(styles.form),
       Static: Form.Static(styles.form),
       Helper: Form.Helper(styles.form),
