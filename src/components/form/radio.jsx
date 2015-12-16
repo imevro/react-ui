@@ -1,33 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import cn from 'classnames';
 
 export default (styles = {}) => {
-  return class extends Component {
-    constructor(props) {
-      super(props);
-    }
+  return (props) => {
+    const className = {
+      [styles.inline]: !!props.inline,
+    };
 
-    handleChange(e) {
-      const ref = this.props.reference;
-      const value = e.target.checked;
-
-      this.props.handleChange(ref, value);
-    }
-
-    render() {
-      const className = {
-        [styles.inline]: !!this.props.inline,
-      };
-
-      return (
-        <div {...this.props} className={cn(styles.radio, { active: this.props.value }, className, this.props.className)}>
-          {JSON.stringify(this.props.value)}
-          <label className={styles.radioLabel}>
-            <input className={styles.radioControl} type="radio" name={this.props.name} defaultChecked={this.props.value} ref={this.props.reference} onChange={::this.handleChange} /> &nbsp;
-            {this.props.children}
-          </label>
-        </div>
-      );
-    }
+    return (
+      <div {...props} className={cn(styles.radio, { active: props.value }, className, props.className)}>
+        <label className={styles.radioLabel}>
+          <input {...props} className={styles.radioControl} type="radio" /> &nbsp;
+          {this.props.children}
+        </label>
+      </div>
+    );
   };
 };
