@@ -371,6 +371,15 @@ Add any of the below mentioned modifier to row to change alignment of a column:
     <UI.Form.Textarea kind="success" block rows="6" defaultValue="Don't forget to add row attribute" />
   </UI.Form.Group>
 </UI.Form.Container>
+
+// or
+// Use this for float Label, but don't forget add required to any Input or Textarea
+<UI.Form.Container>
+  <UI.Form.Group float>
+    <UI.Form.Input type="text" placeholder="Name" required />
+    <UI.Form.Label>Name</UI.Form.Label>
+  </UI.Form.Group>
+</UI.Form.Container>
 ```
 
 #### Group
@@ -385,6 +394,7 @@ Add any of the below mentioned modifier to change the appearance of the form gro
   - error
   - warning
 * horizontal (notice, that label, static and input modify to display: block)
+* float (for float label)
 
 #### Label
 

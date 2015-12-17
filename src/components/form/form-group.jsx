@@ -7,6 +7,7 @@ export default (styles = {}) => props => {
     [styles[`form-` + props.kind]]: !!props.kind,
     [styles.inline]: !!props.inline,
     [styles.horizontal]: !!props.horizontal,
+    [styles.float]: !!props.float,
   };
 
   return (
