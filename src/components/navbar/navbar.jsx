@@ -7,7 +7,7 @@ export default (styles = {}) => props => {
   };
 
   return (
-    <nav className={cn(styles.navbar, className, styles.className)}>
+    <nav className={cn(styles.navbar, className, props.className)}>
       {props.children}
     </nav>
   );
