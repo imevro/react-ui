@@ -9,6 +9,6 @@ export default (styles = {}) => props => {
     [styles[props.type]]: !!props.type,
   };
 
-  const input = props.mask ? <MaskedInput {...props} className={cn(styles.formControl, className, props.className)} /> : <input {...props} className={cn(styles.formControl, className, props.className)} />;
+  const input = props.mask ? <MaskedInput {...props} className={cn(styles.formControl, className, props.className, { [styles.valueClassName]: !!props.value }) } /> : <input {...props} className={cn(styles.formControl, className, props.className, { [styles.valueClassName]: !!props.value })} />;
   return input;
 };
