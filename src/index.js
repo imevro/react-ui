@@ -13,7 +13,7 @@ import Media from './components/media';
 import Pager from './components/pager';
 import Navbar from './components/navbar';
 
-export default function(props = {}) {
+export default function (props = {}) {
   const { styles = {}, components = {} } = props;
 
   return {

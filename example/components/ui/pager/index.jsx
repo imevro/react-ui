@@ -57,44 +57,44 @@ export default (styles = {}) => {
       super(props);
     }
 
-    handleFirstPage = () => {
+    handleFirstPage() {
       if (this.isPrevDisabled()) return;
       this.handlePageChanged(BASE_SHIFT);
     }
 
-    handlePreviousPage = () => {
+    handlePreviousPage() {
       if (this.isPrevDisabled()) return;
       this.handlePageChanged(this.props.current - TITLE_SHIFT);
     }
 
-    handleNextPage = () => {
+    handleNextPage() {
       if (this.isNextDisabled()) return;
       this.handlePageChanged(this.props.current + TITLE_SHIFT);
     }
 
-    handleLastPage = () => {
+    handleLastPage() {
       if (this.isNextDisabled()) return;
       this.handlePageChanged(this.props.total - TITLE_SHIFT);
     }
 
-    handleMorePrevPages = () => {
+    handleMorePrevPages() {
       const blocks = this.calcBlocks();
       this.handlePageChanged(blocks.current * blocks.size - TITLE_SHIFT);
     }
 
-    handleMoreNextPages = () => {
+    handleMoreNextPages() {
       const blocks = this.calcBlocks();
       this.handlePageChanged((blocks.current + TITLE_SHIFT) * blocks.size);
     }
 
-    handlePageChanged = (el) => {
+    handlePageChanged(el) {
       const handler = this.props.onPageChanged;
 
       if (handler) handler(el);
     }
 
 
-    calcBlocks = () => {
+    calcBlocks() {
       const { total, visiblePages } = this.props;
       const current = this.props.current + TITLE_SHIFT;
       const blockSize = visiblePages;
@@ -108,41 +108,41 @@ export default (styles = {}) => {
       };
     }
 
-    isPrevDisabled = () => {
+    isPrevDisabled() {
       return this.props.current <= BASE_SHIFT;
     }
 
-    isNextDisabled = () => {
+    isNextDisabled() {
       return this.props.current >= (this.props.total - TITLE_SHIFT);
     }
 
-    isPrevMoreHidden = () => {
+    isPrevMoreHidden() {
       const blocks = this.calcBlocks();
 
       return (blocks.total === TITLE_SHIFT) || (blocks.current === BASE_SHIFT);
     }
 
-    isNextMoreHidden = () => {
+    isNextMoreHidden() {
       const blocks = this.calcBlocks();
       return (blocks.total === TITLE_SHIFT) || (blocks.current === (blocks.total - TITLE_SHIFT));
     }
 
-    visibleRange = () => {
+    visibleRange() {
       const blocks = this.calcBlocks();
       const start = blocks.current * blocks.size;
       const delta = this.props.total - start;
       const end = start + ((delta > blocks.size) ? blocks.size : delta);
 
-      return [ start + TITLE_SHIFT, end + TITLE_SHIFT ];
+      return [start + TITLE_SHIFT, end + TITLE_SHIFT];
     }
 
-    getTitles = (key) => {
+    getTitles(key) {
       const { titles = {} } = this.props;
 
       return titles[key] || TITLES[key];
     }
 
-    renderPages = ([ first, second ]) => {
+    renderPages([first, second]) {
       return range(first, second).map((el, idx) => {
         const current = el - TITLE_SHIFT;
 
