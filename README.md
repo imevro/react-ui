@@ -358,16 +358,6 @@ Add any of the below mentioned modifier to row to change alignment of a column:
     <UI.Form.Input block kind="warning" placeholder="Email" />
   </UI.Form.Group>
   <UI.Form.Group>
-    <UI.Form.Checkbox>First</UI.Form.Checkbox>
-    <UI.Form.Checkbox>Second</UI.Form.Checkbox>
-    <UI.Form.Checkbox>Third</UI.Form.Checkbox>
-  </UI.Form.Group>
-  <UI.Form.Group>
-    <UI.Form.Radio name="radio">First</UI.Form.Radio>
-    <UI.Form.Radio name="radio">Second</UI.Form.Radio>
-    <UI.Form.Radio name="radio">Third</UI.Form.Radio>
-  </UI.Form.Group>
-  <UI.Form.Group>
     <UI.Form.Textarea kind="success" block rows="6" defaultValue="Don't forget to add row attribute" />
   </UI.Form.Group>
 </UI.Form.Container>
@@ -442,17 +432,6 @@ Add any of the below mentioned modifier to change the appearance of the form inp
 * ranged
 * options
   - array of a object (each object modify to select option)
-
-#### Checkbox
-
-Add inline modifier to change the appearance of the form checkbox:
-* inline
-
-#### Radio
-
-Add inline modifier to change the appearance of the form radio:
-* inline
-* name (notice, that radio need to have the same name attribute for all inputs)
 
 #### Textarea
 
