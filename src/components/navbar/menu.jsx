@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-export default ( styles = {} ) => (props) => {
+export default (styles = {}) => (props) => {
   const className = {
     [styles.left]: !!props.left,
     [styles.right]: !!props.right,
