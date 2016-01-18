@@ -7,6 +7,7 @@ export default (styles = {}) => props => {
     [styles[props.kind]]: !!props.kind,
     [styles.block]: !!props.block,
     [styles[props.type]]: !!props.type,
+    [props.valueClassName]: !!props.value,
   };
 
   if (props.mask) {
