@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/dtrussia/react-ui-core#readme",
   "devDependencies": {
-    "@dtrussia/eslint-config-dtrussia": "2.1.5",
+    "@dtrussia/eslint-config-dtrussia": "2.1.6",
     "autoprefixer": "^6.2.3",
     "babel-cli": "6.4.0",
     "babel-core": "6.4.0",
-    "babel-eslint": "5.0.0-beta6",
+    "babel-eslint": "5.0.0-beta10",
     "babel-loader": "6.2.1",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-es2015": "6.3.13",
