@@ -65,11 +65,11 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
-    "classnames": "^2.2.3",
+    "classnames": "2.2.5",
     "react": "^0.14.6",
     "react-auto-form": "^1.2.4",
     "react-maskedinput": "3.0.0",
-    "react-router": "^1.0.3"
+    "react-router": "2.4.0"
   },
   "peerDependecies": {
     "react": "^0.14.6"
