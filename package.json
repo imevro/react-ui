@@ -66,12 +66,11 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
-    "react": "^0.14.6",
+    "react": "0.14.8",
     "react-auto-form": "^1.2.4",
-    "react-maskedinput": "3.0.0",
-    "react-router": "2.4.0"
+    "react-maskedinput": "3.0.0"
   },
   "peerDependecies": {
-    "react": "^0.14.6"
+    "react": "0.14.8"
   }
 }
