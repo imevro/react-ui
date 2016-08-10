@@ -87,6 +87,36 @@ export default (styles = {}) => {
 }
 ```
 
+The components are then grouped together and passed as an object to `ReactUI`:
+
+```javascript
+/* src/components/ui/basic/index.js */
+
+import Button from './button';
+import Label from './label';
+import Form from './form';
+
+export default {
+  Button,
+  Label,
+  Form: {
+    Form.Input,
+    Form.Group,
+    Form.Label,
+ },
+};
+
+/* src/components/ui/index.js */
+
+// ...
+import basicComponents from 'src/components/ui/basic';
+
+const UI = reactUI(defaultStyles)(
+  basicComponents,
+);
+// ...
+```
+
 
 ## Roadmap
 
