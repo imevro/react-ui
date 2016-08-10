@@ -5,7 +5,7 @@ Standard model of UI development
 
 ## Table Of Contents
 
-* [Why?](#why?)
+* [Why?](#why)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Declaring Components](#declaring-components)
