@@ -92,40 +92,27 @@ The components are then grouped together and passed as an object to `ReactUI`:
 ```javascript
 /* src/components/ui/basic/index.js */
 
-import Button from './button';
-import Label from './label';
-import Form from './form';
+import Button from 'button';
+import Label from 'label';
 
-export default {
-  Button,
-  Label,
-  Form: {
-    Form.Input,
-    Form.Group,
-    Form.Label,
- },
+const components = {
+  Button,
+  Label,
 };
 
-/* src/components/ui/index.js */
-
-// ...
-import basicComponents from 'src/components/ui/basic';
-
-const UI = reactUI(defaultStyles)(
-  basicComponents,
-);
-// ...
+const UI = reactUI(styles)(components);
 ```
 
 
 ## Roadmap
 
-* Add proper documentation and examples
-* Create a layer of core components (as a separate repository)
-* Implement a styleguide generator
-* [Create an issue](https://github.com/jqestate/react-ui/issues/new) if you have a suggestion
+* docs;
+* core components (as a separate repository);
+* styleguide generator;
+
+If you have a suggestion, please, [create an issue](https://github.com/jqestate/react-ui/issues/new).
 
 
 ## License
 
-MIT
+Apache License, Version 2.0
