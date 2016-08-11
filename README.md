@@ -44,15 +44,17 @@ npm install --save @react-ui/core
 Unlike other UI related libraries, React UI doesn't include any built-in components. It rather suggests a pattern for managing components in an app. In fact, React UI exports only a single function that is used for preparing UI for your app:
 
 ```javascript
-/* src/components/ui/index.js */
+// src/components/ui/index.js
 
 import ReactUI from '@react-ui/core';
 
-import defaultStyles from 'src/styles/ui';
-import basicComponents from 'src/components/ui/basic';
+import components from 'src/components/ui/basic';
 
-const UI = reactUI(defaultStyles)(
-  basicComponents,
+import styles from 'src/styles/ui';
+
+
+const UI = reactUI(styles)(
+  components,
 );
 
 export default UI;
@@ -72,16 +74,21 @@ React UI pattern revolves around the following three aspects:
 Components that are passed to `ReactUI` must be wrapped in a function call that accepts `styles` passed during UI creation:
 
 ```javascript
-/* src/components/ui/basic/button.jsx */
+// src/components/ui/basic/button.jsx
 
 import cn from 'classnames';
 
 export default (styles = {}) => {
   return class extends Component {
     render() {
-      <div className={cn(styles.button, this.props.className)}>
-        {this.props.children}
-      </div>
+      const { children } = this.props;
+      const className = cn(styles.button, this.props.className);
+
+      return (
+        <button className={className}>
+          {children}
+        </button>
+      );
     }
   }
 }
@@ -90,10 +97,14 @@ export default (styles = {}) => {
 The components are then grouped together and passed as an object to `ReactUI`:
 
 ```javascript
-/* src/components/ui/index.js */
+// src/components/ui/index.js
+
+import ReactUI from '@react-ui/core';
 
 import Button from './basic/button';
 import Label from './basic/label';
+
+import styles from 'src/styles/ui';
 
 const components = {
   Button,
