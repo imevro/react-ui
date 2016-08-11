@@ -90,17 +90,17 @@ export default (styles = {}) => {
 The components are then grouped together and passed as an object to `ReactUI`:
 
 ```javascript
-/* src/components/ui/basic/index.js */
+/* src/components/ui/index.js */
 
-import Button from 'button';
-import Label from 'label';
+import Button from './basic/button';
+import Label from './basic/label';
 
 const components = {
-  Button,
-  Label,
+  Button,
+  Label,
 };
 
-const UI = reactUI(styles)(components);
+const UI = ReactUI(styles)(components);
 ```
 
 
