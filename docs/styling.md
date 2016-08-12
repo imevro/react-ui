@@ -6,76 +6,76 @@ One of the important aspects of React UI is how styles are provided to component
 
 We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode to declare and import styles. The following steps should be taken to use the same approach:
 
-  1. Install `css-loader`:
+1. Install `css-loader`:
 
-```sh
-npm install --save-dev css-loader
-```
+  ```sh
+  npm install --save-dev css-loader
+  ```
 
-  2. Add settings to webpack configuration file:
+2. Add settings to webpack configuration file:
 
-```javascript
-loaders: [
-  { test: /\.css$/, loader: `style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]` },
-],
-```
+  ```javascript
+  loaders: [
+    { test: /\.css$/, loader: `style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]` },
+  ],
+  ```
 
-  3. Declare styles in CSS files:
+3. Declare styles in CSS files:
 
-```css
-// src/styles/ui/button.css
+  ```css
+  /* src/styles/ui/button.css */
 
-.default {
-  display: inline-block;
-  border-radius: 2px;
-  background-color: transparent;
-}
+  .default {
+    display: inline-block;
+    border-radius: 2px;
+    background-color: transparent;
+  }
 
-.primary {
-  compose: default;
-  background-color: blue;
-}
+  .primary {
+    compose: default;
+    background-color: blue;
+  }
 
-.cancel {
-  compose: default;
-  background-color: red;
-}
-```
+  .cancel {
+    compose: default;
+    background-color: red;
+  }
+  ```
 
-```css
-// src/styles/ui/label.css
+  ```css
+  /* src/styles/ui/label.css */
 
-.default {
-  color: green;
-  background-color: white;
-}
-```
+  .default {
+    color: green;
+    background-color: white;
+  }
+  ```
 
-  4. Prepare `styles` object with keys corresponding to component names and pass it to initialization function:
+4. Prepare `styles` object with keys corresponding to component names and pass it to initialization function:
 
-```javascript
-// src/components/ui/index.js
+  ```javascript
+  // src/components/ui/index.js
 
-import ReactUI from '@react-ui/core';
+  import ReactUI from '@react-ui/core';
 
-import Button from 'src/components/ui/basic/button';
-import Label from 'src/components/ui/basic/label';
+  import Button from 'src/components/ui/basic/button';
+  import Label from 'src/components/ui/basic/label';
 
-import buttonStyles from 'src/styles/button.css';
-import labelStyles from 'src/styles/label.css';
+  import buttonStyles from 'src/styles/button.css';
+  import labelStyles from 'src/styles/label.css';
 
-const styles = {
-  button: buttonStyles,
-  label: labelStyles,
-};
+  const styles = {
+    button: buttonStyles,
+    label: labelStyles,
+  };
 
-const components = {
-  Button,
-  Label,
-};
+  const components = {
+    Button,
+    Label,
+  };
 
-const UI = ReactUI(styles)(components);
-```
+  const UI = ReactUI(styles)(components);
+  ```
 
 React UI pushes the appropriate styles to every component, which, in turn, decide how exactly styles should be applied:
 
