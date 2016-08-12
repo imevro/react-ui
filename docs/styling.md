@@ -4,25 +4,54 @@
 
 One of the important aspects of React UI is how styles are provided to components.
 
-First, styles must be declared. We use CSS Modules along with [`css-loader`](https://github.com/webpack/css-loader) ([configuration example](#example)) to declare and import styles:
+We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode to declare and import styles. The following steps should be taken to use the same approach:
+
+  1. Install `css-loader`:
+
+```sh
+npm install --save-dev css-loader
+```
+
+  2. Add settings to webpack configuration file:
+
+```javascript
+loaders: [
+  { test: /\.css$/, loader: `style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]` },
+],
+```
+
+  3. Declare styles in CSS files:
 
 ```css
-/* src/styles/ui/button.css */
+// src/styles/ui/button.css
 
-.btn {
+.default {
   display: inline-block;
   border-radius: 2px;
   background-color: transparent;
+}
 
-  &:hover,
-  &:active {
-    outline: none;
-    background-color: green;
-  }
+.primary {
+  compose: default;
+  background-color: blue;
+}
+
+.cancel {
+  compose: default;
+  background-color: red;
 }
 ```
 
-`styles` object is then prepared and passed to initialization function:
+```css
+// src/styles/ui/label.css
+
+.default {
+  color: green;
+  background-color: white;
+}
+```
+
+  4. Prepare `styles` object with keys corresponding to component names and pass it to initialization function:
 
 ```javascript
 // src/components/ui/index.js
@@ -48,7 +77,7 @@ const components = {
 const UI = ReactUI(styles)(components);
 ```
 
-React UI pushes styles to all of the components, which, in turn, decide how exactly styles should be applied:
+React UI pushes the appropriate styles to every component, which, in turn, decide how exactly styles should be applied:
 
 ```javascript
 // src/components/ui/basic/button.jsx
@@ -59,7 +88,7 @@ export default (styles = {}) => {
   return class extends Component {
     render() {
       const { children } = this.props;
-      const className = cn(styles.btn, this.props.className);
+      const className = cn(styles.default, this.props.className);
 
       return (
         <button className={className}>
@@ -74,6 +103,4 @@ export default (styles = {}) => {
 
 ## Details
 
-The important thing here is that `styles` object itself can be **anything**! You're free to choose what's appropriate for the given project - be it CSS Modules, styles as plain objects or even a function. This also creates an interesting use case for handling components theming.
-
-Another aspect is that component has access to **all** of the styles (the initial `styles` object is provided without modification). This technique might seem sneaky, but it makes it possible to combine styles when building [composed components](/docs/layers.md).
+The important thing here is that `styles` object itself can be **anything**! You're free to choose what's appropriate for the given project — be it CSS Modules, styles as plain objects or even a function. This also creates an interesting use case for handling components theming.
