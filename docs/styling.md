@@ -51,7 +51,7 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
   }
   ```
 
-4. Prepare `styles` object with keys corresponding to component names and pass it to initialization function:
+4. Prepare `styles` object with keys matching the names of components. Then pass this object to the initialization function:
 
   ```javascript
   // src/components/ui/index.js
@@ -77,7 +77,7 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
   const UI = ReactUI(styles)(components);
   ```
 
-React UI pushes the appropriate styles to every component, which, in turn, decide how exactly styles should be applied:
+React UI pushes the corresponding styles to every component, which, in turn, decides how exactly styles should be applied:
 
 ```javascript
 // src/components/ui/basic/button.jsx
@@ -103,4 +103,4 @@ export default (styles = {}) => {
 
 ## Details
 
-The important thing here is that `styles` object itself can be **anything**! You're free to choose what's appropriate for the given project — be it CSS Modules, styles as plain objects or even a function. This also creates an interesting use case for handling components theming.
+The important thing here is that `styles` can be **anything**! You're free to choose what's appropriate for the given project — be it CSS Modules, styles as plain objects or even a function. This also creates an interesting use case for handling components theming.

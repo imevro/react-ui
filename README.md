@@ -64,9 +64,9 @@ React UI pattern revolves around the following three aspects:
 
   * single point of initialization
 
-  * [styles](/docs/styling.md) are passed to components as a parameter, thus, easing UI theming
+  * [styles are passed to components](/docs/styling.md) as a parameter, thus, easing UI theming
 
-  * UI components can be grouped in [layers](/docs/layers.md), where a given layer has access to the components of parent layers. This exact property helps to achieve the proper UI composition.
+  * [UI components can be grouped in layers](/docs/layers.md), where a given layer has access to the components of parent layers. This exact property helps to achieve the proper UI composition.
 
 
 ## Declaring Components
@@ -117,7 +117,7 @@ const UI = ReactUI(styles)(components);
 
 ## Roadmap
 
-* docs;
+* docs and examples;
 * core components (as a separate repository);
 * styleguide generator;
 
