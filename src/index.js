@@ -1,65 +1,46 @@
-import Alert from './components/alert';
-import Panel from './components/panel';
-import Button from './components/button';
-import BtnGroup from './components/btngroup';
-import Loading from './components/loading';
-import Label from './components/label';
-import Badge from './components/badge';
-import Grid from './components/grid';
-import Image from './components/image';
-import Table from './components/table';
-import Form from './components/form';
-import Media from './components/media';
-import Pager from './components/pager';
-import Navbar from './components/navbar';
+import camelCase from 'lodash/camelCase';
 
-export default function (props = {}) {
-  const { styles = {}, components = {} } = props;
+/**
+ * Recursively initialize a components hierarchy
+ * @param  {Object|Function} component             [Function if a leaf component is supplied, Object if a wrapper component is detected]
+ * @param  {Object}          styles                [Global styles object]
+ * @param  {Object}          parentLayerComponents [An object of already initialized components from parent layer]
+ * @param  {Array}           keyPath               [Path to current component]
+ * @return {Object}                                [An object containing initialized component or components hierarchy]
+ */
+const initComponent = (component, styles, parentLayerComponents, keyPath = []) => {
+  if (typeof component !== `function`) {
+    return Object.keys(component).reduce((result, componentKey) => ({
+      ...result,
+      [componentKey]: initComponent(component[componentKey], styles, parentLayerComponents, [...keyPath, componentKey]),
+    }), {});
+  } else {
+    return component(styles[camelCase(keyPath[0])] || {}, parentLayerComponents);
+  }
+};
 
-  return {
-    Alert: Alert(styles.alert),
-    Panel: Panel(styles.panel),
-    Button: Button(styles.button),
-    BtnGroup: BtnGroup(styles.button),
-    Loading: Loading(styles.loading),
-    Label: Label(styles.label),
-    Badge: Badge(styles.badge),
-    Image: Image(styles.image),
-    Media: Media(styles.media),
-    Pager: Pager(styles.pager),
+/**
+ * Recursive initialization of a layer
+ * @param  {Object} layer                 [Components object related to current UI abstraction layer]
+ * @param  {Object} styles                [Global styles object]
+ * @param  {Object} parentLayerComponents [An object of already initialized components from parent layer]
+ * @return {Object}                       [An object containing initialized components for current layer]
+ */
+const initLayer = (layer, styles, parentLayerComponents) => {
+  return Object.keys(layer).reduce((layerComponents, componentKey) => ({
+    ...layerComponents,
+    [componentKey]: initComponent(layer[componentKey], styles, parentLayerComponents, [componentKey]),
+  }), {});
+};
 
-    Table: {
-      Container: Table.Container(styles.table),
-      Row: Table.Row(styles.table),
-      Cell: Table.Cell(styles.table),
-      Heading: Table.Heading(styles.table),
-    },
+/**
+ * React UI initialization
+ * @param  {Object} styles [Styles for every component]
+ * @return {Object}        [UI object that contains initialized components]
+ */
+const init = (styles = {}) => (...uiLayers) => uiLayers.reduce((initializedComponents, layer) => ({
+  ...initializedComponents,
+  ...initLayer(layer, styles, initializedComponents),
+}), {});
 
-    Form: {
-      Container: Form.Container(styles.form),
-      Group: Form.Group(styles.form),
-      Input: Form.Input(styles.form),
-      Textarea: Form.Textarea(styles.form),
-      Label: Form.Label(styles.form),
-      Select: Form.Select(styles.form),
-      Static: Form.Static(styles.form),
-      Helper: Form.Helper(styles.form),
-    },
-
-    Grid: {
-      Container: Grid.Container(styles.grid),
-      Row: Grid.Row(styles.grid),
-      Col: Grid.Col(styles.grid),
-    },
-
-    Navbar: {
-      Container: Navbar.Container(styles.navbar),
-      Menu: Navbar.Menu(styles.navbar),
-      Link: Navbar.Link(styles.navbar),
-      Static: Navbar.Static(styles.navbar),
-      Brand: Navbar.Brand(styles.navbar),
-    },
-
-    ...components,
-  };
-}
+export default init;

@@ -1,31 +1,39 @@
 {
   "name": "@react-ui/core",
-  "version": "0.0.38",
-  "description": "",
-  "main": "lib/index.js",
+  "version": "1.0.0-beta0",
+  "description": "Standard model of UI development",
+  "keywords": [
+    "react",
+    "ui",
+    "react-ui"
+  ],
+  "homepage": "https://github.com/jqestate/react-ui#readme",
+  "bugs": {
+    "url": "https://github.com/jqestate/react-ui/issues"
+  },
+  "license": "MIT",
+  "author": "Evgeny Rodionov <github@theaqua.im> (https://github.com/theaqua)",
+  "contributors": [
+    "Konstantin Grushetsky <toxickg@icloud.com> (https://github.com/toxickg)"
+  ],
   "files": [
     "lib",
     "src"
   ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jqestate/react-ui.git"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "start": "NODE_ENV=development node webpack.server.development.js",
     "build": "NODE_ENV=production $(npm bin)/babel src --out-dir lib",
-    "lint": "eslint --ext .jsx --ext .js src example",
+    "lint": "eslint --ext .jsx --ext .js src",
     "test": "npm run lint",
     "precommit": "npm test",
     "prepublish": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dtrussia/react-ui-core.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dtrussia/react-ui-core/issues"
-  },
-  "homepage": "https://github.com/dtrussia/react-ui-core#readme",
   "devDependencies": {
     "@dtrussia/eslint-config-dtrussia": "2.1.6",
     "autoprefixer": "^6.2.3",
@@ -65,11 +73,7 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
-    "classnames": "2.2.5",
-    "react": "^0.14.6",
-    "react-auto-form": "^1.2.4",
-    "react-maskedinput": "3.0.0",
-    "react-router": "2.4.0"
+    "lodash": "4.14.0"
   },
   "peerDependecies": {
     "react": "^0.14.6"
