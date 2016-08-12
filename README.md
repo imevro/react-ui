@@ -46,14 +46,14 @@ Unlike other UI related libraries, React UI doesn't include any built-in compone
 ```javascript
 // src/components/ui/index.js
 
-import ReactUI from '@react-ui/core';
+import initUI from '@react-ui/core';
 
 import components from 'src/components/ui/basic';
 
 import styles from 'src/styles/ui';
 
 
-const UI = reactUI(styles)(
+const UI = initUI(styles)(
   components,
 );
 
@@ -71,7 +71,7 @@ React UI pattern revolves around the following three aspects:
 
 ## Declaring Components
 
-Components that are passed to `ReactUI` must be wrapped in a function call that accepts `styles` passed during UI creation:
+Components that are passed to `initUI` must be wrapped in a function call that accepts `styles` passed during UI creation:
 
 ```javascript
 // src/components/ui/basic/button.jsx
@@ -94,12 +94,12 @@ export default (styles = {}) => {
 }
 ```
 
-The components are then grouped together and passed as an object to `ReactUI`:
+The components are then grouped together and passed as an object to `initUI`:
 
 ```javascript
 // src/components/ui/index.js
 
-import ReactUI from '@react-ui/core';
+import initUI from '@react-ui/core';
 
 import Button from './basic/button';
 import Label from './basic/label';
@@ -111,7 +111,9 @@ const components = {
   Label,
 };
 
-const UI = ReactUI(styles)(components);
+const UI = initUI(styles)(components);
+
+export default UI;
 ```
 
 

@@ -56,9 +56,9 @@ export default (styles = {}, UI = {}) => {
 }
 ```
 
-That's where React UI comes in play. It passes `UI` object as the second argument to the component. This object holds every single component declared within _lower level_ layer. So, in our example, `InfoButton` would have access to `Icon`, `Button` and `Label`, but not `HelpButton` as it is located on the same level of hierarchy.
+That's where React UI comes in play. It passes `UI` object as the second argument to the component. This object holds every single component declared within _lower level_ layer. So, in our example, `InfoButton` would have access to `Icon`, `Button` and `Label`, but not `HelpButton` as it's located on the same level of hierarchy.
 
-React UI also guarantees that the initialization of basic layers will be finished **before** _higher level_ components are going to access _lower level_ components.
+React UI also guarantees that the initialization of basic layers will be finished **before** _higher level_ components can access components from the _lower level_.
 
 The only thing that is left to do is to supply the created layers to React UI's init function:
 
@@ -82,4 +82,4 @@ const UI = initUI(styles)(
 export default UI;
 ```
 
-Please, note that layers are passed in the ascending order of complexity (from primitive to complex).
+Please note that layers are passed to `initUI` in the ascending order of complexity (from primitive to complex).

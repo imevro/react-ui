@@ -56,7 +56,7 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
   ```javascript
   // src/components/ui/index.js
 
-  import ReactUI from '@react-ui/core';
+  import initUI from '@react-ui/core';
 
   import Button from 'src/components/ui/basic/button';
   import Label from 'src/components/ui/basic/label';
@@ -74,7 +74,9 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
     Label,
   };
 
-  const UI = ReactUI(styles)(components);
+  const UI = initUI(styles)(components);
+
+  export default UI;
   ```
 
 React UI pushes the corresponding styles to every component, which, in turn, decides how exactly styles should be applied:
