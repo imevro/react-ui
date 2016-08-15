@@ -23,10 +23,10 @@ import UI from 'src/components/ui';
 class SomeContainer extends Component {
   render() {
     return (
-      <div>
+      <section>
       	<UI.Label>Hello, GitHub!</UI.Label>
-      	<UI.Button caption="OK" />
-      </div>
+      	<UI.Button kind="primary">Send</UI.Button>
+      </section>
     );
   }
 }
@@ -47,15 +47,10 @@ Unlike other UI related libraries, React UI doesn't include any built-in compone
 // src/components/ui/index.js
 
 import initUI from '@react-ui/core';
-
-import components from 'src/components/ui/basic';
-
+import components from 'src/components/ui';
 import styles from 'src/styles/ui';
 
-
-const UI = initUI(styles)(
-  components,
-);
+const UI = initUI(styles)(components);
 
 export default UI;
 ```
