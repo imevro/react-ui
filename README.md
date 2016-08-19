@@ -45,22 +45,24 @@ Unlike other UI related libraries, React UI doesn't include any built-in compone
 
 ```javascript
 // src/components/ui/index.js
+
 import initUI from '@react-ui/core';
 
-import atomsComponents from 'src/components/ui/atoms'; // buttons, labels, etc
-import moleculesComponents from 'src/components/ui/molecules'; // forms, etc
+import atomsComponents from 'src/components/ui/atoms'; // button, label, etc.
+import moleculesComponents from 'src/components/ui/molecules'; // form, etc.
+
 import atomsStyles from 'src/styles/ui/atoms';
 import moleculesStyles from 'src/styles/ui/molecules';
 
 const styles = {
   ...atomsStyles,
   ...moleculesStyles
-}
+};
 
 const UI = initUI(styles)(atomsComponents, moleculesComponents);
 
-// instead of
-const UI = initUI(atomsStyles, moleculesStyles)(atomsComponents, moleculesComponents);
+// Instead of this:
+// const UI = initUI(atomsStyles, moleculesStyles)(atomsComponents, moleculesComponents);
 
 export default UI;
 ```
