@@ -74,7 +74,7 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
     Label,
   };
 
-  const UI = initUI(styles)(components);
+  const UI = initUI(components)(styles);
 
   export default UI;
   ```
@@ -105,4 +105,6 @@ export default (styles = {}) => {
 
 ## Details
 
-The important thing here is that `styles` can be **anything**! You're free to choose what's appropriate for the given project — be it CSS Modules, styles as plain objects or even a function. This also creates an interesting use case for handling components theming.
+The important thing here is that `styles` can be **anything**! You're free to choose what's appropriate for the given project — be it CSS Modules, styles as plain objects or even a function. It's possible to omit `styles` parameter whatsoever in case a global styling approach is chosen (importing styles directly in the component's file).
+
+In general, we recommend to construct `styles` object and pass it to the initialization function. It creates a useful precedent for handling components theming.

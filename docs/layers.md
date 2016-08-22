@@ -73,11 +73,11 @@ import primitiveLayer from 'src/components/ui/primitiveLayer';
 import complexLayer from 'src/components/ui/complexLayer';
 import evenMoreComplexLayer from 'src/components/ui/evenMoreComplexLayer';
 
-const UI = initUI(styles)(
+const UI = initUI(
   components,
   complexLayer,
   evenMoreComplexLayer,
-);
+)(styles);
 
 export default UI;
 ```

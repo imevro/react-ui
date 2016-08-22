@@ -15,17 +15,17 @@ Standard model of UI development
 
 ## Why?
 
-When building React apps a multitude of components is created. They end up scattered across the project, making it hard to control and use them. React UI tries to solve that problem by encapsulating all of the components into a single dependency that can be used across the app:
+When building React apps a multitude of components is created. They end up scattered across the project, making it hard to control and use them. React UI tries to solve the problem by encapsulating all of the components into a single dependency that is used across the app:
 
 ```javascript
 import UI from 'src/components/ui';
 
-class SomeContainer extends Component {
+class GreetingButton extends Component {
   render() {
     return (
       <section>
-      	<UI.Label>Hello, GitHub!</UI.Label>
-      	<UI.Button kind="primary">Send</UI.Button>
+      	<UI.Label>Press the button to greet everyone</UI.Label>
+      	<UI.Button kind="primary">Hello, GitHub!</UI.Button>
       </section>
     );
   }
@@ -48,21 +48,9 @@ Unlike other UI related libraries, React UI doesn't include any built-in compone
 
 import initUI from '@react-ui/core';
 
-import atomsComponents from 'src/components/ui/atoms'; // button, label, etc.
-import moleculesComponents from 'src/components/ui/molecules'; // form, etc.
+import { Button, Label } from 'src/components/ui/atoms';
 
-import atomsStyles from 'src/styles/ui/atoms';
-import moleculesStyles from 'src/styles/ui/molecules';
-
-const styles = {
-  ...atomsStyles,
-  ...moleculesStyles
-};
-
-const UI = initUI(styles)(atomsComponents, moleculesComponents);
-
-// Instead of this:
-// const UI = initUI(atomsStyles, moleculesStyles)(atomsComponents, moleculesComponents);
+const UI = initUI({ Button, Label })();
 
 export default UI;
 ```
@@ -118,7 +106,7 @@ const components = {
   Label,
 };
 
-const UI = initUI(styles)(components);
+const UI = initUI(components)(styles);
 
 export default UI;
 ```
