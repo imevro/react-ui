@@ -18,22 +18,18 @@ When building React apps a multitude of components is created. They end up scatt
 ```jsx
 import UI from 'src/components/ui';
 
-class GreetingButton extends Component {
-  render() {
-    return (
-      <section>
-      	<UI.Label>Press the button to greet everyone</UI.Label>
-      	<UI.Button kind="primary">Hello, GitHub!</UI.Button>
-      </section>
-    );
-  }
+const Header = () => {
+  return (
+    <section>
+    	<UI.Label>Press the button to greet everyone</UI.Label>
+    	<UI.Button kind="primary">Hello, GitHub!</UI.Button>
+    </section>
+  );
 }
 ```
 
 
 ## Usage
-
-Install React UI, first:
 ```sh
 npm install --save @react-ui/core
 ```
