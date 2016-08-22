@@ -39,7 +39,7 @@ export default {
 };
 ```
 
-```javascript
+```jsx
 // src/components/ui/complexLayer/infoButton.jsx
 
 export default (styles = {}, UI = {}) => {
@@ -58,7 +58,7 @@ export default (styles = {}, UI = {}) => {
 
 That's where React UI comes in play. It passes `UI` object as the second argument to the component. This object holds every single component declared within _lower level_ layer. So, in our example, `InfoButton` would have access to `Icon`, `Button` and `Label`, but not `HelpButton` as it's located on the same level of hierarchy.
 
-React UI also guarantees that the initialization of layers is accomplished consecutively. _Higher level_ components get access to _lower level_ components only **after** their initialization.
+React UI also guarantees that the initialization of layers is accomplished consecutively. _Higher level_ components get access to _lower level_ components only **after** their initialization is finished.
 
 The only thing that is left to do is to supply the created layers to React UI's init function:
 

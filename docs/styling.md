@@ -4,7 +4,7 @@
 
 One of the important aspects of React UI is how styles are provided to components.
 
-We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode to declare and import styles. The following steps should be taken to use the same approach:
+We recommend to use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode to declare and import styles. The following steps should be taken to use the same approach:
 
 1. Install `css-loader`:
 
@@ -81,7 +81,7 @@ We use [`css-loader`](https://github.com/webpack/css-loader) in CSS Modules mode
 
 React UI pushes the corresponding styles to every component, which, in turn, decides how exactly styles should be applied:
 
-```javascript
+```jsx
 // src/components/ui/basic/button.jsx
 
 import cn from 'classnames';
@@ -93,9 +93,9 @@ export default (styles = {}) => {
       const className = cn(styles.default, this.props.className);
 
       return (
-        <button className={className}>
+        <input type="button" className={className}>
           {children}
-        </button>
+        </input>
       );
     }
   }
