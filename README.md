@@ -47,11 +47,15 @@ Unlike other UI related libraries, React UI doesn't include any built-in compone
 // src/components/ui/index.js
 
 import initUI from '@react-ui/core';
+import Button from './button';
+import Label from './label';
 
-import { Button, Label } from 'src/components/ui/atoms';
+const components = {
+  Button,
+  Label,
+}
 
-const UI = initUI({ Button, Label })();
-
+const UI = initUI(components)();
 export default UI;
 ```
 
@@ -68,23 +72,21 @@ React UI pattern revolves around the following three aspects:
 
 Components that are passed to `initUI` must be wrapped in a function call that accepts `styles` passed during UI creation:
 
-```javascript
+```jsx
 // src/components/ui/basic/button.jsx
 
 import cn from 'classnames';
 
 export default (styles = {}) => {
-  return class extends Component {
-    render() {
-      const { children } = this.props;
-      const className = cn(styles.button, this.props.className);
+  return (props) => {
+    const { children } = props;
+    const className = cn(styles.button, props.className);
 
-      return (
-        <button className={className}>
-          {children}
-        </button>
-      );
-    }
+    return (
+      <button className={className}>
+        {children}
+      </button>
+    );
   }
 }
 ```
@@ -95,22 +97,17 @@ The components are then grouped together and passed as an object to `initUI`:
 // src/components/ui/index.js
 
 import initUI from '@react-ui/core';
-
-import Button from './basic/button';
-import Label from './basic/label';
-
-import styles from 'src/styles/ui';
+import Button from './button';
+import Label from './label';
 
 const components = {
   Button,
   Label,
-};
+}
 
-const UI = initUI(components)(styles);
-
+const UI = initUI(components)();
 export default UI;
 ```
-
 
 ## Roadmap
 
