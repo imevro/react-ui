@@ -93,9 +93,9 @@ export default (styles = {}) => {
       const className = cn(styles.default, this.props.className);
 
       return (
-        <input type="button" className={className}>
-          {children}
-        </input>
+        <input type="button" className={className}>
+          {children}
+        </input>
       );
     }
   }

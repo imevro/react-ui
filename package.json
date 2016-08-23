@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/jqestate/react-ui/issues"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "author": "Evgeny Rodionov <github@theaqua.im> (https://github.com/theaqua)",
   "contributors": [
     "Konstantin Grushetsky <toxickg@icloud.com> (https://github.com/toxickg)"
