@@ -2,6 +2,9 @@
 
 Standard model of UI development
 
+[![build status](https://img.shields.io/travis/jqestate/react-ui/master.svg?style=flat)](https://travis-ci.org/jqestate/react-ui)
+[![npm version](https://img.shields.io/npm/v/@react-ui/core.svg?style=flat)](https://www.npmjs.com/package/@react-ui/core)
+
 
 ## Table Of Contents
 
