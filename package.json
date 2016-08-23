@@ -28,10 +28,10 @@
   "scripts": {
     "clean": "rimraf lib",
     "build": "NODE_ENV=production $(npm bin)/babel src --out-dir lib",
-    "lint": "eslint --ext .jsx --ext .js src",
-    "test": "npm run lint",
-    "precommit": "npm test",
-    "prepublish": "npm run clean && npm run build"
+    "lint": "eslint --ext .js src",
+    "check": "npm run lint",
+    "precommit": "npm run check",
+    "prepublish": "npm run clean && npm run check && npm run build"
   },
   "devDependencies": {
     "@dtrussia/eslint-config-dtrussia": "2.2.1",
